@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  Project362
-//
-//  Created by Kameron Carr on 2/17/18.
-//  Copyright © 2018 Kameron Carr. All rights reserved.
-//
 
 import UIKit
 

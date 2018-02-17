@@ -7,7 +7,25 @@
 		<key>Project362.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>6</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>00F7D94F2038C31400D4CE32</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>00F7D9632038C31400D4CE32</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>00F7D96E2038C31400D4CE32</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
