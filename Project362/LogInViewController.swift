@@ -14,10 +14,11 @@ import FacebookShare
 
 class LogInViewController: UIViewController {
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    
+        UserProfile.updatesOnAccessTokenChange = true
     }
 
     @IBAction func loginButtonAction(_ sender: UIButton) {
@@ -28,8 +29,8 @@ class LogInViewController: UIViewController {
                 print("Error:::::::\(error)")
             case .cancelled:
                 print("User cancelled login.")
-            case .success:
-                //self.performSegue(withIdentifier: "login", sender: nil)
+            case .success(let grantedPermissions, let declinedPermissions, let accessToken):
+                
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 
                 let mainViewController = storyBoard.instantiateViewController(withIdentifier: "MainView")

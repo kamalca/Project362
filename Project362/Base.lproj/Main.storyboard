@@ -13,15 +13,17 @@
         <!--Log In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LogInViewController" customModule="Project362" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginView" id="BYZ-38-t0r" customClass="LogInViewController" customModule="Project362" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hM-cq-gyH">
-                                <rect key="frame" x="25" y="312" width="330" height="44"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Log In"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hM-cq-gyH">
+                                <rect key="frame" x="47" y="303" width="281" height="60"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Log in with Facebook"/>
                                 <connections>
                                     <action selector="loginButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PRc-bL-Nuw"/>
                                 </connections>
@@ -29,19 +31,17 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1hM-cq-gyH" secondAttribute="trailing" constant="20" id="Dfn-JF-fcZ"/>
-                            <constraint firstItem="1hM-cq-gyH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SUb-e5-WMu"/>
-                            <constraint firstItem="1hM-cq-gyH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="dHs-Yn-jVG"/>
+                            <constraint firstItem="1hM-cq-gyH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="7jb-8H-5Tg"/>
+                            <constraint firstItem="1hM-cq-gyH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NVF-N7-L2S"/>
+                            <constraint firstItem="1hM-cq-gyH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="283" id="biQ-ze-B9D"/>
+                            <constraint firstItem="1hM-cq-gyH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rU3-8f-wBo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <segue destination="q2h-c5-PRj" kind="show" identifier="login" id="Tel-nX-kQd"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7" y="36"/>
+            <point key="canvasLocation" x="-7.2000000000000002" y="35.532233883058474"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="KcX-Qr-4gv">
@@ -67,6 +67,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bp5-Et-tt5"/>
                     </view>
+                    <connections>
+                        <outlet property="UserInfoLabel" destination="RJj-Cp-NPB" id="BTR-nH-cWT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="reg-f8-ur4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
