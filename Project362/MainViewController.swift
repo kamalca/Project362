@@ -12,6 +12,8 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        UserInfoLabel.numberOfLines = 0
+        
         UserProfile.loadCurrent { (result) in
             switch(result){
             case .failed(let error):

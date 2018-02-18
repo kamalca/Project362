@@ -18,10 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lbq-29-Lfj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="0fR-2F-zzm">
+                                <rect key="frame" x="0.0" y="1" width="375" height="666"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hM-cq-gyH">
-                                <rect key="frame" x="47" y="303" width="281" height="60"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <rect key="frame" x="47" y="304" width="281" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.25697523178220472" blue="0.47173935174942017" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="aGx-vC-Eee"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Log in with Facebook"/>
                                 <connections>
@@ -29,11 +39,17 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1hM-cq-gyH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="7jb-8H-5Tg"/>
+                            <constraint firstItem="lbq-29-Lfj" firstAttribute="bottom" secondItem="0fR-2F-zzm" secondAttribute="bottom" id="8aT-Is-Kcw"/>
+                            <constraint firstItem="0fR-2F-zzm" firstAttribute="centerX" secondItem="1hM-cq-gyH" secondAttribute="centerX" id="L9O-GE-dxX"/>
                             <constraint firstItem="1hM-cq-gyH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NVF-N7-L2S"/>
-                            <constraint firstItem="1hM-cq-gyH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="283" id="biQ-ze-B9D"/>
+                            <constraint firstItem="0fR-2F-zzm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PWp-I2-c2f"/>
+                            <constraint firstItem="lbq-29-Lfj" firstAttribute="centerY" secondItem="0fR-2F-zzm" secondAttribute="centerY" id="Srd-wf-IbQ"/>
+                            <constraint firstItem="0fR-2F-zzm" firstAttribute="centerY" secondItem="1hM-cq-gyH" secondAttribute="centerY" id="iGw-K6-aLb"/>
+                            <constraint firstItem="0fR-2F-zzm" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="js4-wY-XHE"/>
+                            <constraint firstItem="lbq-29-Lfj" firstAttribute="trailing" secondItem="0fR-2F-zzm" secondAttribute="trailing" id="kU6-Os-ENf"/>
+                            <constraint firstItem="lbq-29-Lfj" firstAttribute="leading" secondItem="0fR-2F-zzm" secondAttribute="leading" id="rFO-LO-nGL"/>
                             <constraint firstItem="1hM-cq-gyH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rU3-8f-wBo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -51,18 +67,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7tC-T1-ZRy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="APK-rd-DeD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've Logged In!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJj-Cp-NPB">
-                                <rect key="frame" x="25" y="319.5" width="325" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="25" y="319" width="325" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="APK-rd-DeD" firstAttribute="centerX" secondItem="RJj-Cp-NPB" secondAttribute="centerX" id="2dM-0e-teL"/>
+                            <constraint firstItem="APK-rd-DeD" firstAttribute="bottom" secondItem="bp5-Et-tt5" secondAttribute="bottom" id="38B-66-Iad"/>
+                            <constraint firstItem="7tC-T1-ZRy" firstAttribute="trailing" secondItem="APK-rd-DeD" secondAttribute="trailing" id="aTA-y4-cce"/>
+                            <constraint firstItem="APK-rd-DeD" firstAttribute="leading" secondItem="Nmo-Ac-I0o" secondAttribute="leading" id="bv7-ar-mV6"/>
                             <constraint firstItem="bp5-Et-tt5" firstAttribute="trailing" secondItem="RJj-Cp-NPB" secondAttribute="trailing" constant="25" id="cbZ-Qj-qEo"/>
+                            <constraint firstItem="7tC-T1-ZRy" firstAttribute="leading" secondItem="APK-rd-DeD" secondAttribute="leading" id="eIz-1c-o2R"/>
                             <constraint firstItem="RJj-Cp-NPB" firstAttribute="leading" secondItem="bp5-Et-tt5" secondAttribute="leading" constant="25" id="kUF-Pw-Rjh"/>
+                            <constraint firstItem="APK-rd-DeD" firstAttribute="centerY" secondItem="RJj-Cp-NPB" secondAttribute="centerY" id="kds-f6-6a0"/>
                             <constraint firstItem="RJj-Cp-NPB" firstAttribute="centerY" secondItem="Nmo-Ac-I0o" secondAttribute="centerY" id="lAb-Gt-9eh"/>
+                            <constraint firstItem="7tC-T1-ZRy" firstAttribute="bottom" secondItem="bp5-Et-tt5" secondAttribute="bottom" id="pdV-fU-slN"/>
+                            <constraint firstItem="7tC-T1-ZRy" firstAttribute="top" secondItem="APK-rd-DeD" secondAttribute="top" id="pzV-AP-nrU"/>
                             <constraint firstItem="RJj-Cp-NPB" firstAttribute="centerX" secondItem="Nmo-Ac-I0o" secondAttribute="centerX" id="rin-t9-30b"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bp5-Et-tt5"/>
@@ -73,7 +111,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="reg-f8-ur4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="810" y="36"/>
+            <point key="canvasLocation" x="808.79999999999995" y="35.532233883058474"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="1242" height="2208"/>
+    </resources>
 </document>
