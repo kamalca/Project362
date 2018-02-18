@@ -6,7 +6,9 @@ target 'Project362' do
   use_frameworks!
 
   # Pods for Project362
-pod 'FBSDKLoginKit'
+pod 'FacebookCore'
+pod 'FacebookLogin'
+pod 'FacebookShare'
 
   target 'Project362Tests' do
     inherit! :search_paths
