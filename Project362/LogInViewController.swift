@@ -18,7 +18,7 @@ class LogInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        UserProfile.updatesOnAccessTokenChange = true
+        //UserProfile.updatesOnAccessTokenChange = true
     }
 
     @IBAction func loginButtonAction(_ sender: UIButton) {

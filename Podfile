@@ -9,6 +9,7 @@ target 'Project362' do
 pod 'FacebookCore'
 pod 'FacebookLogin'
 pod 'FacebookShare'
+pod 'Venmo-iOS-SDK', '~>1.0.0'
 
   target 'Project362Tests' do
     inherit! :search_paths
