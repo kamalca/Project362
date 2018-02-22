@@ -9,8 +9,15 @@ target 'Project362' do
 pod 'FacebookCore'
 pod 'FacebookLogin'
 pod 'FacebookShare'
+
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
+
+pod 'FirebaseUI/Auth'
+pod 'FirebaseUI/Google'
+pod 'FirebaseUI/Facebook'
+pod 'FirebaseUI/Twitter'
+pod 'FirebaseUI/Phone'
 
   target 'Project362Tests' do
     inherit! :search_paths
