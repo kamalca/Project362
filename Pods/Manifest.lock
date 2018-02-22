@@ -1,19 +1,4 @@
 PODS:
-  - AFNetworking (3.2.0):
-    - AFNetworking/NSURLSession (= 3.2.0)
-    - AFNetworking/Reachability (= 3.2.0)
-    - AFNetworking/Security (= 3.2.0)
-    - AFNetworking/Serialization (= 3.2.0)
-    - AFNetworking/UIKit (= 3.2.0)
-  - AFNetworking/NSURLSession (3.2.0):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.2.0)
-  - AFNetworking/Security (3.2.0)
-  - AFNetworking/Serialization (3.2.0)
-  - AFNetworking/UIKit (3.2.0):
-    - AFNetworking/NSURLSession
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
     - Bolts/Tasks (= 1.9.0)
@@ -39,21 +24,13 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.30.0):
     - FBSDKCoreKit (~> 4.30.0)
-  - SSKeychain (1.2.3)
-  - VENCore (1.0.0):
-    - AFNetworking
-  - Venmo-iOS-SDK (1.0.2):
-    - SSKeychain (~> 1.2.2)
-    - VENCore (~> 1.0.0)
 
 DEPENDENCIES:
   - FacebookCore
   - FacebookLogin
   - FacebookShare
-  - Venmo-iOS-SDK (~> 1.0.0)
 
 SPEC CHECKSUMS:
-  AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
   FacebookLogin: 0af839ea858faef99550d16596b87b4a8e8906e6
@@ -61,10 +38,7 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: 7c4bba2877781a131ab5d54c0a78c405d4307b62
   FBSDKLoginKit: fe7a7e82373dc5daad92e1623219e86224ab1fb1
   FBSDKShareKit: a9427574b51bde4f437262c3f118c4ccfddeef6c
-  SSKeychain: 3f42991739c6c60a9cf1bbd4dff6c0d3694bcf3d
-  VENCore: 224c4aa25ac64b47bbfefb130196ce2ecb4087bf
-  Venmo-iOS-SDK: be2960bebdd85bae2c45675d1be8f650356a7494
 
-PODFILE CHECKSUM: 8663e5bf50e64a1df1c308ffeae1e4af816cd01d
+PODFILE CHECKSUM: deadf562bbe80f49789ec664e11b09243e632cba
 
 COCOAPODS: 1.4.0
