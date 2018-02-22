@@ -113,7 +113,7 @@
             </objects>
             <point key="canvasLocation" x="808.79999999999995" y="35.532233883058474"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Posts-->
         <scene sceneID="4CK-OV-x3e">
             <objects>
                 <tableViewController id="mkY-Eq-gLK" sceneMemberID="viewController">
@@ -129,7 +129,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOV-FV-l8C">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="# swipes for $ each" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOV-FV-l8C">
                                             <rect key="frame" x="16" y="0.0" width="343" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -145,7 +145,7 @@
                             <outlet property="delegate" destination="mkY-Eq-gLK" id="Qdm-ab-j2T"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="MVE-sG-NNx"/>
+                    <navigationItem key="navigationItem" title="Posts" id="MVE-sG-NNx"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1k7-pB-v1m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

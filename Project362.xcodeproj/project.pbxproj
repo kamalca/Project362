@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00A6E6AD203E6E8800039D67 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A6E6AC203E6E8800039D67 /* File.swift */; };
+		00A6E6AD203E6E8800039D67 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A6E6AC203E6E8800039D67 /* PostViewController.swift */; };
 		00A9A2652039109A0077B171 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A9A2642039109A0077B171 /* MainViewController.swift */; };
 		00F7D9542038C31400D4CE32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F7D9532038C31400D4CE32 /* AppDelegate.swift */; };
 		00F7D9562038C31400D4CE32 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F7D9552038C31400D4CE32 /* LogInViewController.swift */; };
@@ -39,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00A6E6AC203E6E8800039D67 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		00A6E6AC203E6E8800039D67 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		00A9A2642039109A0077B171 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		00F7D9502038C31400D4CE32 /* Project362.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project362.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F7D9532038C31400D4CE32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 				00F7D9532038C31400D4CE32 /* AppDelegate.swift */,
 				00F7D9552038C31400D4CE32 /* LogInViewController.swift */,
 				00A9A2642039109A0077B171 /* MainViewController.swift */,
-				00A6E6AC203E6E8800039D67 /* File.swift */,
+				00A6E6AC203E6E8800039D67 /* PostViewController.swift */,
 				00F7D9572038C31400D4CE32 /* Main.storyboard */,
 				00F7D95A2038C31400D4CE32 /* Assets.xcassets */,
 				00F7D95C2038C31400D4CE32 /* LaunchScreen.storyboard */,
@@ -481,7 +481,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00A9A2652039109A0077B171 /* MainViewController.swift in Sources */,
-				00A6E6AD203E6E8800039D67 /* File.swift in Sources */,
+				00A6E6AD203E6E8800039D67 /* PostViewController.swift in Sources */,
 				00F7D9562038C31400D4CE32 /* LogInViewController.swift in Sources */,
 				00F7D9542038C31400D4CE32 /* AppDelegate.swift in Sources */,
 			);
