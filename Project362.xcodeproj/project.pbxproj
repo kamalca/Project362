@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0047C9C32047A136006FDA55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0047C9C22047A135006FDA55 /* GoogleService-Info.plist */; };
 		00A6E6AF203E7BA500039D67 /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A6E6AE203E7BA500039D67 /* PostTableViewController.swift */; };
+		00A6E6B1203E7C7C00039D67 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A6E6B0203E7C7C00039D67 /* PostTableViewCell.swift */; };
 		00A9A2652039109A0077B171 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A9A2642039109A0077B171 /* MainViewController.swift */; };
 		00F7D9542038C31400D4CE32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F7D9532038C31400D4CE32 /* AppDelegate.swift */; };
 		00F7D9562038C31400D4CE32 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F7D9552038C31400D4CE32 /* LogInViewController.swift */; };
@@ -39,7 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0047C9C22047A135006FDA55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		00A6E6AE203E7BA500039D67 /* PostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
+		00A6E6B0203E7C7C00039D67 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		00A9A2642039109A0077B171 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		00F7D9502038C31400D4CE32 /* Project362.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project362.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F7D9532038C31400D4CE32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,10 +126,12 @@
 				00F7D9552038C31400D4CE32 /* LogInViewController.swift */,
 				00A9A2642039109A0077B171 /* MainViewController.swift */,
 				00A6E6AE203E7BA500039D67 /* PostTableViewController.swift */,
+				00A6E6B0203E7C7C00039D67 /* PostTableViewCell.swift */,
 				00F7D9572038C31400D4CE32 /* Main.storyboard */,
 				00F7D95A2038C31400D4CE32 /* Assets.xcassets */,
 				00F7D95C2038C31400D4CE32 /* LaunchScreen.storyboard */,
 				00F7D95F2038C31400D4CE32 /* Info.plist */,
+				0047C9C22047A135006FDA55 /* GoogleService-Info.plist */,
 			);
 			path = Project362;
 			sourceTree = "<group>";
@@ -288,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00F7D95E2038C31400D4CE32 /* LaunchScreen.storyboard in Resources */,
+				0047C9C32047A136006FDA55 /* GoogleService-Info.plist in Resources */,
 				00F7D95B2038C31400D4CE32 /* Assets.xcassets in Resources */,
 				00F7D9592038C31400D4CE32 /* Main.storyboard in Resources */,
 			);
@@ -453,7 +460,9 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -465,7 +474,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +493,7 @@
 			files = (
 				00A9A2652039109A0077B171 /* MainViewController.swift in Sources */,
 				00A6E6AF203E7BA500039D67 /* PostTableViewController.swift in Sources */,
+				00A6E6B1203E7C7C00039D67 /* PostTableViewCell.swift in Sources */,
 				00F7D9562038C31400D4CE32 /* LogInViewController.swift in Sources */,
 				00F7D9542038C31400D4CE32 /* AppDelegate.swift in Sources */,
 			);
