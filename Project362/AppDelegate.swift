@@ -1,7 +1,6 @@
 
 import UIKit
 import Firebase
-import FirebaseAuthUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -11,15 +10,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-<<<<<<< HEAD
-        FirebaseApp.configure()
-=======
+
 		FirebaseApp.configure()
 		
 		var ref: DatabaseReference!
 		ref = Database.database().reference()
 		
->>>>>>> c2ef5788470f1bab2d878ac7746c034ae43db94b
         return true
     }
 
