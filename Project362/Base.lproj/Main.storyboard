@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -116,28 +117,46 @@
         <!--Posts-->
         <scene sceneID="4CK-OV-x3e">
             <objects>
-                <tableViewController id="mkY-Eq-gLK" sceneMemberID="viewController">
+                <tableViewController id="mkY-Eq-gLK" customClass="PostTableViewController" customModule="Project362" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zT1-jl-kFM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="9k7-fH-J4g">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PostViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostViewCell" rowHeight="100" id="9k7-fH-J4g" customClass="PostTableViewCell" customModule="Project362" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9k7-fH-J4g" id="tdi-X6-WEd">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="# swipes for $ each" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOV-FV-l8C">
-                                            <rect key="frame" x="16" y="0.0" width="343" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOV-FV-l8C">
+                                            <rect key="frame" x="16" y="11" width="343" height="42"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w96-6B-VAQ">
+                                            <rect key="frame" x="16" y="44" width="343" height="55"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="oOV-FV-l8C" firstAttribute="top" secondItem="tdi-X6-WEd" secondAttribute="topMargin" id="1OV-fU-1qf"/>
+                                        <constraint firstItem="w96-6B-VAQ" firstAttribute="leading" secondItem="oOV-FV-l8C" secondAttribute="leading" id="CNa-52-xIi"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="oOV-FV-l8C" secondAttribute="bottom" constant="36" id="JRF-Wo-4I4"/>
+                                        <constraint firstItem="oOV-FV-l8C" firstAttribute="trailing" secondItem="tdi-X6-WEd" secondAttribute="trailingMargin" id="h3D-e5-B1V"/>
+                                        <constraint firstItem="w96-6B-VAQ" firstAttribute="top" secondItem="tdi-X6-WEd" secondAttribute="topMargin" constant="33" id="iQU-za-xUR"/>
+                                        <constraint firstItem="oOV-FV-l8C" firstAttribute="leading" secondItem="tdi-X6-WEd" secondAttribute="leadingMargin" id="j2y-I6-tPJ"/>
+                                        <constraint firstItem="w96-6B-VAQ" firstAttribute="trailing" secondItem="oOV-FV-l8C" secondAttribute="trailing" id="uIt-Rt-kFQ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="w96-6B-VAQ" secondAttribute="bottom" constant="-10" id="zqp-DS-JF7"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="postPreviewLabel" destination="oOV-FV-l8C" id="KiB-Le-oXt"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -152,7 +171,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1k7-pB-v1m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="756" y="728"/>
+            <point key="canvasLocation" x="756" y="727.28635682158927"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zWm-Ef-3bb">
