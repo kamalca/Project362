@@ -48,7 +48,8 @@ class PostTableViewController: UITableViewController {
         // Fetch the appropriate post for the data source layout.
         
         
-        cell.postPreviewLabel.text = "This text"
+        cell.postTitleLabel.text = "This text"
+        //cell.postSummaryLabel.text = "Post Summary"
         
         return cell
     }

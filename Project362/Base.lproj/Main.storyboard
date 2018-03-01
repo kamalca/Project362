@@ -155,7 +155,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="postPreviewLabel" destination="oOV-FV-l8C" id="KiB-Le-oXt"/>
+                                    <outlet property="postSummaryLabel" destination="w96-6B-VAQ" id="AEz-6Y-1s4"/>
+                                    <outlet property="postTitleLabel" destination="oOV-FV-l8C" id="KiB-Le-oXt"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
