@@ -12,11 +12,7 @@ pod 'FacebookShare'
 
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
-
-pod 'FirebaseUI/Auth'
-pod 'FirebaseUI/Google'
-pod 'FirebaseUI/Facebook'
-pod 'FirebaseUI/Phone'
+pod 'Firebase/Database'
 
   target 'Project362Tests' do
     inherit! :search_paths
