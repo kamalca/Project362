@@ -1,6 +1,7 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -10,10 +11,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
-		FIRApp.configure()
+		FirebaseApp.configure()
 		
-		//var ref: DatabaseReference!
-		//ref = Database.database().reference()
+		var ref: DatabaseReference!
+		ref = Database.database().reference()
+        
 		//let postsRef = ref.child("posts").childByAutoId()
 		//postsRef.child("name").setValue(name)
 		
