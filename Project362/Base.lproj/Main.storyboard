@@ -165,7 +165,17 @@
                             <outlet property="delegate" destination="mkY-Eq-gLK" id="Qdm-ab-j2T"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Posts" id="MVE-sG-NNx"/>
+                    <navigationItem key="navigationItem" title="Posts" id="MVE-sG-NNx">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="9ih-CW-cxl">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="cOT-mJ-JoY">
+                                <rect key="frame" x="337" y="11" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="RK3-fL-wfr" kind="show" id="A1m-Jq-aT8"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="e1R-hC-WCU" kind="show" identifier="segueToPost" id="rfZ-Ea-frU"/>
                     </connections>
@@ -175,6 +185,21 @@
             <point key="canvasLocation" x="1927" y="1238"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="LMg-JG-5bS">
+            <objects>
+                <viewController id="RK3-fL-wfr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WQn-dP-X4I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="cU8-2t-toQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cW5-UE-AR7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2809" y="1968"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="XSA-u7-XaR">
             <objects>
                 <viewController id="JNK-IB-dNU" sceneMemberID="viewController">
@@ -182,18 +207,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKz-Oj-KIF">
-                                <rect key="frame" x="131" y="152" width="112" height="121"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKz-Oj-KIF">
+                                <rect key="frame" x="143" y="152" width="88" height="121"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="121" id="BT7-MH-tHD"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <state key="normal" title="BUY"/>
                                 <connections>
                                     <segue destination="ueC-Ug-UzU" kind="show" id="dJ2-mP-yX5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZv-tP-jlT">
-                                <rect key="frame" x="131" y="340" width="112" height="121"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZv-tP-jlT">
+                                <rect key="frame" x="136.5" y="340" width="101" height="66"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <state key="normal" title="SELL"/>
                                 <connections>
@@ -202,6 +228,13 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jKz-Oj-KIF" firstAttribute="top" secondItem="N1a-IO-EX0" secondAttribute="top" constant="88" id="DBk-bs-reF"/>
+                            <constraint firstItem="CZv-tP-jlT" firstAttribute="centerX" secondItem="ThL-PP-KMg" secondAttribute="centerX" id="HE9-Qr-qOT"/>
+                            <constraint firstItem="jKz-Oj-KIF" firstAttribute="centerX" secondItem="ThL-PP-KMg" secondAttribute="centerX" id="Ia4-8v-Nd3"/>
+                            <constraint firstItem="jKz-Oj-KIF" firstAttribute="centerX" secondItem="CZv-tP-jlT" secondAttribute="centerX" id="kQz-DQ-ozW"/>
+                            <constraint firstItem="CZv-tP-jlT" firstAttribute="top" secondItem="jKz-Oj-KIF" secondAttribute="bottom" constant="67" id="rak-Wb-DhD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="N1a-IO-EX0"/>
                     </view>
                     <navigationItem key="navigationItem" id="tAH-oa-YLK"/>
@@ -218,9 +251,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIG-gX-EP0">
-                                <rect key="frame" x="94" y="526" width="187" height="121"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIG-gX-EP0">
+                                <rect key="frame" x="111" y="526" width="154" height="121"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <state key="normal" title="Confirm"/>
                                 <connections>
@@ -229,6 +261,11 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hIG-gX-EP0" firstAttribute="top" secondItem="TOq-eJ-kVK" secondAttribute="top" constant="462" id="7eX-0b-gWh"/>
+                            <constraint firstAttribute="bottom" secondItem="hIG-gX-EP0" secondAttribute="bottom" constant="20" symbolic="YES" id="PRZ-Jo-IYJ"/>
+                            <constraint firstItem="hIG-gX-EP0" firstAttribute="centerX" secondItem="2vK-0b-5TL" secondAttribute="centerX" id="Zr0-ZV-sHq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="TOq-eJ-kVK"/>
                     </view>
                 </viewController>
