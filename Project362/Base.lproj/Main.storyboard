@@ -166,14 +166,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Posts" id="MVE-sG-NNx">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="9ih-CW-cxl">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="cOT-mJ-JoY">
-                                <rect key="frame" x="337" y="11" width="22" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="RK3-fL-wfr" kind="show" id="A1m-Jq-aT8"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="9ih-CW-cxl">
+                            <connections>
+                                <segue destination="RK3-fL-wfr" kind="show" id="BoJ-IA-PKS"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
