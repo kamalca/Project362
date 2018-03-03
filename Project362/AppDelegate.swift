@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		var ref: DatabaseReference!
 		ref = Database.database().reference()
 		
+        
+        
         return true
     }
 

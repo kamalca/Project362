@@ -10,6 +10,8 @@ import UIKit
 
 class PostTableViewController: UITableViewController {
 
+    var tappedPostIndex: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +27,17 @@ class PostTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let destination = segue.destination as? PostInfoViewController {
+            
+            //pass data here
+            destination.postIndex = tappedPostIndex
+            
+        }
+        
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -33,7 +46,7 @@ class PostTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return 2
     }
 
     
@@ -54,6 +67,10 @@ class PostTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tappedPostIndex = indexPath.row
+        self.performSegue(withIdentifier: "segueToPost", sender: nil)
+    }
 
     /*
     // Override to support conditional editing of the table view.
