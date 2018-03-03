@@ -11,8 +11,8 @@ pod 'FacebookLogin'
 pod 'FacebookShare'
 
 pod 'Firebase/Core'
-pod 'Firebase/Auth'
 pod 'Firebase/Database'
+pod 'Firebase/Auth'
 
   target 'Project362Tests' do
     inherit! :search_paths
