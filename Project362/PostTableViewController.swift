@@ -106,7 +106,7 @@ class PostTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
 
-        return posts.count
+        return 100//posts.count
     }
 
     
@@ -119,12 +119,17 @@ class PostTableViewController: UITableViewController {
         }
         
         // Fetch the appropriate post for the data source layout.
-        
-
+        var color: Int = indexPath.row
+        color *= 36
+        color /= 10
+        let red: CGFloat = CGFloat(colorWave[(color+120)%360]) / 255
+        let green: CGFloat = CGFloat(colorWave[(color%360)]) / 255
+        let blue:CGFloat = CGFloat(colorWave[(color+240)%360]) / 255
+        cell.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 0.75)
         //cell.postSummaryLabel.text = "Post Summary"
 		
-		cell.postTitleLabel.text = posts[indexPath.row].name
-		cell.postSummaryLabel.text = posts[indexPath.row].postID
+		//cell.postTitleLabel.text = posts[indexPath.row].name
+		//cell.postSummaryLabel.text = posts[indexPath.row].postID
         
         return cell
     }
