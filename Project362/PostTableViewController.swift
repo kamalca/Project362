@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class PostTableViewController: UITableViewController {
 
@@ -58,10 +59,21 @@ class PostTableViewController: UITableViewController {
         0,   0,   0,   0,   0,   0,   0,   0]
     
     var tappedPostIndex: Int = 0
+	
+	var posts = [Post]()
+	@IBOutlet weak var postTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		DatabaseService.shared.postsReference.observe(FIRDatabaseEventType.value, with: {
+			(snapshot) in
+			print(snapshot)
+			guard let postsSnapshot = PostsSnapshot(with: snapshot) else { return }
+			self.posts = postsSnapshot.posts
+			self.postsTableView.reloadData()
+		})
+		
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -93,30 +105,29 @@ class PostTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 100
+
+        return posts.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Table view cells are reused and should be dequeued using a cell identifier.
-        let cellIdentifier = "PostViewCell"
+        //let cellIdentifier = "PostViewCell"
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? PostTableViewCell  else {
-            fatalError("The dequeued cell is not an instance of MealTableViewCell.")
-        }
+        //guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? PostTableViewCell  else {
+            //fatalError("The dequeued cell is not an instance of MealTableViewCell.")
+			
+			
+        //}
         
         // Fetch the appropriate post for the data source layout.
         
-        
-        cell.postTitleLabel.text = "This text"
-        var color: Int = indexPath.row
-        color *= 36
-        color /= 10
-        let red: CGFloat = CGFloat(colorWave[(color+120)%360] / 255)
-        let green: CGFloat
-        let blue: CGFloat
-        cell.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 255)
+
         //cell.postSummaryLabel.text = "Post Summary"
+		
+		let cell = UITableViewCell(style: default, reuserIdentifier: nil)
+		cell.textLabel?.text = posts[indexPath.row].name
+		cell.detailTextLabel?.text = posts[indexPAth.row].postID
         
         return cell
     }

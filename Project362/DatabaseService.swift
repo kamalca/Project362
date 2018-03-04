@@ -9,4 +9,9 @@
 import Foundation
 import Firebase
 
-
+class DatabaseService {
+	static let shared = DatabaseService()
+	private init() {}
+	
+	let postsReference = FIRDatabase.database().reference().child("posts")
+}
