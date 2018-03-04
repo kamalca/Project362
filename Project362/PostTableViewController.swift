@@ -106,7 +106,7 @@ class PostTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
 
-        return 100//posts.count
+        return posts.count
     }
 
     
@@ -128,8 +128,8 @@ class PostTableViewController: UITableViewController {
         cell.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 0.75)
         //cell.postSummaryLabel.text = "Post Summary"
 		
-		//cell.postTitleLabel.text = posts[indexPath.row].name
-		//cell.postSummaryLabel.text = posts[indexPath.row].postID
+		cell.postTitleLabel.text = posts[indexPath.row].name
+		cell.postSummaryLabel.text = posts[indexPath.row].postID
         
         return cell
     }
