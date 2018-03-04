@@ -16,7 +16,7 @@ struct Post {
 	let location: String
 	let comments: String
 	
-	init(postID: String, dict: [String: Any]) {
+	init?(postID: String, dict: [String: Any]) {
 		self.postID = postID
 		
 		guard let name = dict["name"] as? String,

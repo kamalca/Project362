@@ -65,7 +65,6 @@ class PostTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-		print(DatabaseService.shared.postsReference.child("1").child("name").value)
 		DatabaseService.shared.postsReference.observe(DataEventType.value, with: { (snapshot) in
 			print(snapshot)
 			guard let postsSnapshot = PostsSnapshot(with: snapshot) else { return }
