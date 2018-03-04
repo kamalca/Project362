@@ -61,17 +61,16 @@ class PostTableViewController: UITableViewController {
     var tappedPostIndex: Int = 0
 	
 	var posts = [Post]()
-	@IBOutlet weak var postTableView: UITableView!
+	@IBOutlet weak var postsTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-		DatabaseService.shared.postsReference.observe(DataEventType.value, with: {
-			(snapshot) in
+		print(DatabaseService.shared.postsReference.child("1").child("name").value)
+		DatabaseService.shared.postsReference.observe(DataEventType.value, with: { (snapshot) in
 			print(snapshot)
 			guard let postsSnapshot = PostsSnapshot(with: snapshot) else { return }
 			self.posts = postsSnapshot.posts
-			self.postTableView.reloadData()
+			self.postsTableView.reloadData()
 		})
 		
         // Uncomment the following line to preserve selection between presentations
