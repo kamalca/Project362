@@ -13,5 +13,5 @@ class DatabaseService {
 	static let shared = DatabaseService()
 	private init() {}
 	
-	let postsReference = FIRDatabase.database().reference().child("posts")
+	let postsReference = Database.database().reference().child("posts")
 }

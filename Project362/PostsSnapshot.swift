@@ -12,12 +12,12 @@ import Firebase
 struct PostsSnapshot { 
 	let posts: [Post]
 	
-	init?(with snapshot: FIRDataSnapshot) {
+	init?(with snapshot: DataSnapshot) {
 		var posts = [Post]()
 		guard let snapDict = snapshot.value as? [String: [String: Any]] 
 		else { return nil }
 		for snap in snapDict {
-			guard let post = Post(postID: snap.key, dict: snap.value) else { continue }
+			 let post = Post(postID: snap.key, dict: snap.value)
 			posts.append(post)
 		}
 		self.posts = posts

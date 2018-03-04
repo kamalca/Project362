@@ -23,9 +23,11 @@ struct Post {
 		let price = dict["price"] as? String,
 		let swipes = dict["swipes"] as? String,
 		let location = dict["location"] as? String,
-		let comments = dict["comments"] as? String,
+        let comments = dict["comments"] as? String else{
+            fatalError()
+        }
 		
-		self.name = username
+		self.name = name
 		self.price = price
 		self.swipes = swipes
 		self.location = location

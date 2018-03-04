@@ -66,12 +66,12 @@ class PostTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-		DatabaseService.shared.postsReference.observe(FIRDatabaseEventType.value, with: {
+		DatabaseService.shared.postsReference.observe(DataEventType.value, with: {
 			(snapshot) in
 			print(snapshot)
 			guard let postsSnapshot = PostsSnapshot(with: snapshot) else { return }
 			self.posts = postsSnapshot.posts
-			self.postsTableView.reloadData()
+			self.postTableView.reloadData()
 		})
 		
         // Uncomment the following line to preserve selection between presentations
@@ -112,22 +112,19 @@ class PostTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Table view cells are reused and should be dequeued using a cell identifier.
-        //let cellIdentifier = "PostViewCell"
+        let cellIdentifier = "PostViewCell"
         
-        //guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? PostTableViewCell  else {
-            //fatalError("The dequeued cell is not an instance of MealTableViewCell.")
-			
-			
-        //}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? PostTableViewCell  else {
+            fatalError("The dequeued cell is not an instance of MealTableViewCell.")
+        }
         
         // Fetch the appropriate post for the data source layout.
         
 
         //cell.postSummaryLabel.text = "Post Summary"
 		
-		let cell = UITableViewCell(style: default, reuserIdentifier: nil)
-		cell.textLabel?.text = posts[indexPath.row].name
-		cell.detailTextLabel?.text = posts[indexPAth.row].postID
+		cell.postTitleLabel.text = posts[indexPath.row].name
+		cell.postSummaryLabel.text = posts[indexPath.row].postID
         
         return cell
     }
