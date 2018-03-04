@@ -14,8 +14,8 @@ struct PostsSnapshot {
 	
 	init?(with snapshot: DataSnapshot) {
 		var posts = [Post]()
-		guard let snapDict = snapshot.value as? [String: [String: Any]] 
-		else { return nil }
+		guard let snapDict = snapshot.value as? [String: [String: Any]] //This line isn't working
+            else { return nil }
 		for snap in snapDict {
             guard let post = Post(postID: snap.key, dict: snap.value) else { fatalError() }
 			posts.append(post)

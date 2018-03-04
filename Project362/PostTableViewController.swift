@@ -60,13 +60,12 @@ class PostTableViewController: UITableViewController {
     
     var tappedPostIndex: Int = 0
 	
-	var posts = [Post]()
+    var posts = [Post]()
 	@IBOutlet weak var postsTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 		DatabaseService.shared.postsReference.observe(DataEventType.value, with: { (snapshot) in
-			print(snapshot)
 			guard let postsSnapshot = PostsSnapshot(with: snapshot) else { return }
 			self.posts = postsSnapshot.posts
 			self.postsTableView.reloadData()

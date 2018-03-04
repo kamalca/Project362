@@ -173,6 +173,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="postsTableView" destination="zT1-jl-kFM" id="w8p-Ym-zom"/>
                         <segue destination="e1R-hC-WCU" kind="show" identifier="segueToPost" id="rfZ-Ea-frU"/>
                     </connections>
                 </tableViewController>
