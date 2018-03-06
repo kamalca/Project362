@@ -14,6 +14,7 @@
 		00844FFB2047AE6D009CE4B2 /* PostInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00844FFA2047AE6D009CE4B2 /* PostInfoViewController.swift */; };
 		00A6E6AF203E7BA500039D67 /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A6E6AE203E7BA500039D67 /* PostTableViewController.swift */; };
 		00A6E6B1203E7C7C00039D67 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A6E6B0203E7C7C00039D67 /* PostTableViewCell.swift */; };
+		00F55E82204F421500970ACF /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F55E81204F421500970ACF /* NewPostViewController.swift */; };
 		00F7D9542038C31400D4CE32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F7D9532038C31400D4CE32 /* AppDelegate.swift */; };
 		00F7D9562038C31400D4CE32 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F7D9552038C31400D4CE32 /* LogInViewController.swift */; };
 		00F7D9592038C31400D4CE32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F7D9572038C31400D4CE32 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		00844FFA2047AE6D009CE4B2 /* PostInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInfoViewController.swift; sourceTree = "<group>"; };
 		00A6E6AE203E7BA500039D67 /* PostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
 		00A6E6B0203E7C7C00039D67 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		00F55E81204F421500970ACF /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		00F7D9502038C31400D4CE32 /* Project362.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project362.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F7D9532038C31400D4CE32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00F7D9552038C31400D4CE32 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				00197121204B7AC3003E4757 /* PostsSnapshot.swift */,
 				00A6E6B0203E7C7C00039D67 /* PostTableViewCell.swift */,
 				00F7D9572038C31400D4CE32 /* Main.storyboard */,
+				00F55E81204F421500970ACF /* NewPostViewController.swift */,
 				00844FFA2047AE6D009CE4B2 /* PostInfoViewController.swift */,
 				00F7D95A2038C31400D4CE32 /* Assets.xcassets */,
 				00F7D95C2038C31400D4CE32 /* LaunchScreen.storyboard */,
@@ -505,6 +508,7 @@
 				00A6E6B1203E7C7C00039D67 /* PostTableViewCell.swift in Sources */,
 				00197125204B7AC4003E4757 /* Post.swift in Sources */,
 				00F7D9562038C31400D4CE32 /* LogInViewController.swift in Sources */,
+				00F55E82204F421500970ACF /* NewPostViewController.swift in Sources */,
 				00197124204B7AC4003E4757 /* PostsSnapshot.swift in Sources */,
 				00844FFB2047AE6D009CE4B2 /* PostInfoViewController.swift in Sources */,
 				00F7D9542038C31400D4CE32 /* AppDelegate.swift in Sources */,

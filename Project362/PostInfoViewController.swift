@@ -7,16 +7,19 @@
 //
 
 import UIKit
+import Firebase
 
 class PostInfoViewController: UIViewController {
 
     @IBOutlet weak var postInfoLabel: UILabel!
     var postIndex: Int = 0
+    var posts: [Post] = [Post]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         postInfoLabel.numberOfLines = 0
-        postInfoLabel.text = "Really short text. \(postIndex)"
+        postInfoLabel.text = posts[postIndex].postID
+        
         // Do any additional setup after loading the view.
     }
 

@@ -67,7 +67,8 @@ class PostTableViewController: UITableViewController {
         super.viewDidLoad()
 		DatabaseService.shared.postsReference.observe(DataEventType.value, with: { (snapshot) in
 			guard let postsSnapshot = PostsSnapshot(with: snapshot) else { return }
-			self.posts = postsSnapshot.posts
+			print(snapshot)
+            self.posts = postsSnapshot.posts
 			self.postsTableView.reloadData()
 		})
 		
@@ -84,11 +85,12 @@ class PostTableViewController: UITableViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        super.prepare(for: segue, sender: sender)
         if let destination = segue.destination as? PostInfoViewController {
             
             //pass data here
             destination.postIndex = tappedPostIndex
+            destination.posts = self.posts
             
         }
         
@@ -121,7 +123,7 @@ class PostTableViewController: UITableViewController {
         let red: CGFloat = CGFloat(colorWave[(color+120)%360]) / 255
         let green: CGFloat = CGFloat(colorWave[(color%360)]) / 255
         let blue:CGFloat = CGFloat(colorWave[(color+240)%360]) / 255
-        cell.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 0.75)
+        //cell.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 0.75)
         //cell.postSummaryLabel.text = "Post Summary"
 		
 		cell.postTitleLabel.text = posts[indexPath.row].name
