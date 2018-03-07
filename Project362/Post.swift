@@ -11,8 +11,8 @@ import Foundation
 struct Post { 
 	let postID: String
 	let name: String
-	let price: String
-	let swipes: String	
+	let price: Double
+	let swipes: Int	
 	let location: String
 	let comments: String
 	
@@ -20,8 +20,8 @@ struct Post {
 		self.postID = postID
 		
 		guard let name = dict["name"] as? String,
-		let price = dict["price"] as? String,
-		let swipes = dict["swipes"] as? String,
+		let price = dict["price"] as? Double,
+		let swipes = dict["swipes"] as? Int,
 		let location = dict["location"] as? String,
         let comments = dict["comments"] as? String else{
             fatalError()

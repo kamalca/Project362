@@ -26,6 +26,12 @@ class NewPostViewController: UIViewController {
     @IBAction func save(_ sender: Any) {
         dismiss(animated: true) {
             print("Save Data")
+			let parameters = ["name"	: "name",
+							  "price"	: pricePerSwipe.text,
+							  "swipes"	: numberOfSwipes.text,
+							  "location": location.text,
+							  "comments": comments.text]
+			DatabaseService.shared.postsReference.childByAutoId().setValue(parameters)
         }
     }
     @IBAction func cancel(_ sender: UIBarButtonItem) {
