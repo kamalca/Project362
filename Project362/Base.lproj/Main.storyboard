@@ -67,57 +67,6 @@
             </objects>
             <point key="canvasLocation" x="-724" y="574"/>
         </scene>
-        <!--Filter View Controller-->
-        <scene sceneID="v3K-lO-UwC">
-            <objects>
-                <viewController id="QaW-Ow-zuv" customClass="FilterViewController" customModule="Project362" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xDP-4M-yvX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lR-1P-7Me">
-                                <rect key="frame" x="127" y="577" width="121" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="mEH-nw-mVc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Filter"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbZ-6D-UAc">
-                                <rect key="frame" x="92" y="167" width="190" height="40"/>
-                                <color key="backgroundColor" red="0.530245576" green="0.83252550059999997" blue="0.98720854920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="ixR-dU-pBw"/>
-                                    <constraint firstAttribute="height" constant="40" id="zlC-4e-b5c"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Select Location">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="dIj-fX-cWk" kind="presentation" modalPresentationStyle="overCurrentContext" id="UGP-Lj-c6t"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="XIL-LY-8Zl" firstAttribute="trailing" secondItem="5lR-1P-7Me" secondAttribute="trailing" constant="127" id="32y-js-gn4"/>
-                            <constraint firstItem="xbZ-6D-UAc" firstAttribute="top" secondItem="XIL-LY-8Zl" secondAttribute="top" constant="103" id="EMJ-bw-2vz"/>
-                            <constraint firstItem="XIL-LY-8Zl" firstAttribute="trailing" secondItem="xbZ-6D-UAc" secondAttribute="trailing" constant="93" id="IiL-yR-MiT"/>
-                            <constraint firstItem="XIL-LY-8Zl" firstAttribute="bottom" secondItem="5lR-1P-7Me" secondAttribute="bottom" constant="20" id="TGH-0d-5rf"/>
-                            <constraint firstItem="5lR-1P-7Me" firstAttribute="leading" secondItem="XIL-LY-8Zl" secondAttribute="leading" constant="127" id="dnV-Og-XEg"/>
-                            <constraint firstItem="xbZ-6D-UAc" firstAttribute="leading" secondItem="XIL-LY-8Zl" secondAttribute="leading" constant="92" id="fbX-un-QsY"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="XIL-LY-8Zl"/>
-                    </view>
-                    <connections>
-                        <outlet property="filterButton" destination="5lR-1P-7Me" id="Mrk-NZ-Q8c"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sgB-hA-jOS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1570" y="574"/>
-        </scene>
         <!--Posts-->
         <scene sceneID="4CK-OV-x3e">
             <objects>
@@ -178,7 +127,7 @@
                             </barButtonItem>
                             <barButtonItem title="Filter" id="OUK-Kv-a0v">
                                 <connections>
-                                    <segue destination="QaW-Ow-zuv" kind="show" identifier="FilterPosts" id="5aP-1h-X7I"/>
+                                    <segue destination="dIj-fX-cWk" kind="presentation" modalPresentationStyle="overCurrentContext" id="Jmg-Kl-s4o"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -584,7 +533,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wfO-wN-eHs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="776" y="574"/>
+            <point key="canvasLocation" x="1828" y="597"/>
         </scene>
     </scenes>
     <resources>

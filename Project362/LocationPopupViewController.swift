@@ -16,7 +16,7 @@ class LocationPopupViewController: UIViewController, UIPickerViewDataSource, UIP
     
     var loc = ""
     
-    let locations = ["BPlate", "Covel", "De Neve", "Feast", "Rendezvous"]
+    let locations = ["BPlate", "Covel", "De Neve", "Feast", "BCafe", "Cafe 1919", "Rendezvous", "The Study"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,10 +45,8 @@ class LocationPopupViewController: UIViewController, UIPickerViewDataSource, UIP
     
     
     @IBAction func saveLocation_TouchUpInside(_ sender: UIButton) {
-        //let filterVC = storyboard?.instantiateViewController(withIdentifier: "filterVC") as! FilterViewController
-        //filterVC.locationSelected = loc
-        //navigationController?.pushViewController(filterVC, animated: true)
         
+        DatabaseService.shared.postsReference.queryEqual(toValue: loc, childKey: "location")
         
         dismiss(animated: true)
     }
