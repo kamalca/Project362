@@ -88,7 +88,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Post Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOV-FV-l8C">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOV-FV-l8C">
                                             <rect key="frame" x="16" y="20" width="343" height="42"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <nil key="textColor"/>
@@ -96,9 +96,9 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="oOV-FV-l8C" firstAttribute="top" secondItem="tdi-X6-WEd" secondAttribute="topMargin" id="1OV-fU-1qf"/>
+                                        <constraint firstItem="oOV-FV-l8C" firstAttribute="top" secondItem="tdi-X6-WEd" secondAttribute="topMargin" constant="9" id="1OV-fU-1qf"/>
                                         <constraint firstItem="w96-6B-VAQ" firstAttribute="leading" secondItem="oOV-FV-l8C" secondAttribute="leading" id="CNa-52-xIi"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="oOV-FV-l8C" secondAttribute="bottom" constant="36" id="JRF-Wo-4I4"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="oOV-FV-l8C" secondAttribute="bottom" constant="27" id="JRF-Wo-4I4"/>
                                         <constraint firstItem="oOV-FV-l8C" firstAttribute="trailing" secondItem="tdi-X6-WEd" secondAttribute="trailingMargin" id="h3D-e5-B1V"/>
                                         <constraint firstItem="w96-6B-VAQ" firstAttribute="top" secondItem="tdi-X6-WEd" secondAttribute="topMargin" constant="30" id="iQU-za-xUR"/>
                                         <constraint firstItem="oOV-FV-l8C" firstAttribute="leading" secondItem="tdi-X6-WEd" secondAttribute="leadingMargin" id="j2y-I6-tPJ"/>
