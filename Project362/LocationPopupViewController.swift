@@ -57,8 +57,17 @@ class LocationPopupViewController: UIViewController, UIPickerViewDataSource, UIP
                 }
             })
         }
+        else {
+            loc = ""
+        }
         
-        dismiss(animated: true)
+        performSegue(withIdentifier: "UnwindPopup", sender: self)
+    }
+    
+    @IBAction override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? PostTableViewController {
+            destination.filter = self.loc
+        }
     }
 }
 

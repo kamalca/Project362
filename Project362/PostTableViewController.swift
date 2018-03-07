@@ -12,6 +12,7 @@ import Firebase
 class PostTableViewController: UITableViewController {
     
     var tappedPostIndex: Int = 0
+    var filter: String = ""
 	
     var posts = [Post]()
 	@IBOutlet weak var postsTableView: UITableView!
@@ -93,7 +94,10 @@ class PostTableViewController: UITableViewController {
         tappedPostIndex = indexPath.row
         self.performSegue(withIdentifier: "segueToPost", sender: nil)
     }
-
+    
+    @IBAction func unwind(segue:UIStoryboardSegue) {
+        print(filter)
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
