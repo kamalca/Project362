@@ -206,8 +206,8 @@
                                     <action selector="onEdit:" destination="RK3-fL-wfr" eventType="editingChanged" id="THl-jg-LnS"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgl-hx-cpl">
-                                <rect key="frame" x="16" y="253" width="160" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date (MM/DD hh:mm AM):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgl-hx-cpl">
+                                <rect key="frame" x="16" y="253" width="235" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -251,7 +251,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="CtR-Z9-mhg" firstAttribute="trailing" secondItem="IG7-Uz-j98" secondAttribute="trailing" id="008-NL-WoB"/>
-                            <constraint firstItem="IG7-Uz-j98" firstAttribute="top" secondItem="Pgl-hx-cpl" secondAttribute="bottom" constant="8" symbolic="YES" id="1UZ-TI-xSd"/>
                             <constraint firstItem="CtR-Z9-mhg" firstAttribute="trailing" secondItem="sFS-L9-CHI" secondAttribute="trailing" id="1dE-lV-suP"/>
                             <constraint firstItem="CtR-Z9-mhg" firstAttribute="leading" secondItem="eyc-zn-9YK" secondAttribute="leading" id="2Tv-o8-72b"/>
                             <constraint firstItem="CtR-Z9-mhg" firstAttribute="trailing" secondItem="WQn-dP-X4I" secondAttribute="trailingMargin" id="3al-MM-h4K"/>
@@ -261,19 +260,21 @@
                             <constraint firstItem="CtR-Z9-mhg" firstAttribute="leading" secondItem="IG7-Uz-j98" secondAttribute="leading" id="APw-9W-Jcs"/>
                             <constraint firstItem="hsa-Z4-m65" firstAttribute="top" secondItem="CtR-Z9-mhg" secondAttribute="bottom" constant="8" symbolic="YES" id="AeX-RV-n1L"/>
                             <constraint firstItem="CtR-Z9-mhg" firstAttribute="top" secondItem="1CN-s7-CHp" secondAttribute="bottom" constant="4" id="DaM-wB-yUV"/>
+                            <constraint firstItem="Pgl-hx-cpl" firstAttribute="leading" secondItem="xa2-8X-ubl" secondAttribute="leading" id="F8C-0K-ANC"/>
                             <constraint firstItem="1CN-s7-CHp" firstAttribute="top" secondItem="sFS-L9-CHI" secondAttribute="bottom" constant="8" symbolic="YES" id="FBd-gM-XgA"/>
                             <constraint firstItem="CtR-Z9-mhg" firstAttribute="leading" secondItem="scl-dn-g6M" secondAttribute="leading" id="Fon-rc-PN7"/>
                             <constraint firstItem="CtR-Z9-mhg" firstAttribute="leading" secondItem="VTh-FC-r1z" secondAttribute="leading" id="H5C-C0-Hwx"/>
                             <constraint firstItem="xa2-8X-ubl" firstAttribute="top" secondItem="hsa-Z4-m65" secondAttribute="bottom" constant="8" symbolic="YES" id="IbN-VN-kll"/>
                             <constraint firstItem="eyc-zn-9YK" firstAttribute="top" secondItem="biY-TO-ca6" secondAttribute="bottom" constant="8" symbolic="YES" id="KZn-tv-5ma"/>
+                            <constraint firstItem="cU8-2t-toQ" firstAttribute="trailing" secondItem="Pgl-hx-cpl" secondAttribute="trailing" constant="124" id="Pmw-yQ-EVh"/>
                             <constraint firstItem="CtR-Z9-mhg" firstAttribute="trailing" secondItem="biY-TO-ca6" secondAttribute="trailing" id="RFf-su-fzP"/>
                             <constraint firstItem="scl-dn-g6M" firstAttribute="top" secondItem="IG7-Uz-j98" secondAttribute="bottom" constant="8" symbolic="YES" id="S8O-YE-yc1"/>
                             <constraint firstItem="CtR-Z9-mhg" firstAttribute="leading" secondItem="1CN-s7-CHp" secondAttribute="leading" id="TJh-XK-2yK"/>
-                            <constraint firstItem="Pgl-hx-cpl" firstAttribute="top" secondItem="xa2-8X-ubl" secondAttribute="bottom" constant="8" symbolic="YES" id="YY9-ib-wFE"/>
                             <constraint firstItem="CtR-Z9-mhg" firstAttribute="leading" secondItem="sFS-L9-CHI" secondAttribute="leading" id="bhu-NI-Dna"/>
-                            <constraint firstItem="CtR-Z9-mhg" firstAttribute="leading" secondItem="Pgl-hx-cpl" secondAttribute="leading" id="cPg-qf-XUl"/>
                             <constraint firstItem="CtR-Z9-mhg" firstAttribute="leading" secondItem="biY-TO-ca6" secondAttribute="leading" id="efi-z2-uHL"/>
                             <constraint firstItem="CtR-Z9-mhg" firstAttribute="leading" secondItem="WQn-dP-X4I" secondAttribute="leadingMargin" id="f4D-Co-Txw"/>
+                            <constraint firstItem="IG7-Uz-j98" firstAttribute="top" secondItem="Pgl-hx-cpl" secondAttribute="bottom" constant="8" symbolic="YES" id="f5S-xM-DVF"/>
+                            <constraint firstItem="Pgl-hx-cpl" firstAttribute="top" secondItem="xa2-8X-ubl" secondAttribute="bottom" constant="8" symbolic="YES" id="fEg-QH-JNI"/>
                             <constraint firstAttribute="bottom" secondItem="kSx-lq-HvP" secondAttribute="bottom" constant="20" symbolic="YES" id="h6q-Zq-Z7H"/>
                             <constraint firstItem="CtR-Z9-mhg" firstAttribute="trailing" secondItem="xa2-8X-ubl" secondAttribute="trailing" id="kYC-VT-AJy"/>
                             <constraint firstItem="biY-TO-ca6" firstAttribute="top" secondItem="VTh-FC-r1z" secondAttribute="bottom" constant="8" symbolic="YES" id="kgT-ci-FqJ"/>
@@ -314,7 +315,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cW5-UE-AR7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3570" y="758"/>
+            <point key="canvasLocation" x="3568.8000000000002" y="757.87106446776613"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="XSA-u7-XaR">
