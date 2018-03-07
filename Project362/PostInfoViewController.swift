@@ -23,6 +23,13 @@ class PostInfoViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func contact(_ sender: Any) {
+        if (UIApplication.shared.canOpenURL(URL(string: "sms:")!))
+        {
+            UIApplication.shared.openURL(URL(string: "sms:")!)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
