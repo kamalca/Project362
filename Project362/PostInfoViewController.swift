@@ -26,7 +26,9 @@ class PostInfoViewController: UIViewController {
     @IBAction func contact(_ sender: Any) {
         if (UIApplication.shared.canOpenURL(URL(string: "sms:")!))
         {
-            UIApplication.shared.openURL(URL(string: "sms:")!)
+            UIApplication.shared.open(URL(string: "sms:" + posts[postIndex].phoneNumber)!, options: [:] , completionHandler:{ (didComplete) in
+                //Completion Handler
+            })
         }
     }
     

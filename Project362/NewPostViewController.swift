@@ -36,7 +36,8 @@ class NewPostViewController: UIViewController {
 							  "location": self.location.text!,
 							  "time"	: self.time.text!,
 							  "phoneNumber": self.phoneNumber.text!,
-							  "comments": self.comments.text]
+							  "comments": self.comments.text,
+                              "buyer": self.BuyOrSell.isEnabledForSegment(at: 0)]
             
             
 //            UserProfile.loadCurrent({ (result) in
@@ -68,12 +69,13 @@ class NewPostViewController: UIViewController {
     @IBAction func editingDidEnd(_ sender: UITextField) {
         if let number = phoneNumber.text
         {
-            print(String(number.filter { "01234567890".contains($0) }))
             phoneNumber.text = String(number.filter { "01234567890".contains($0) })
         }
         if (Int(numberOfSwipes.text!) != nil &&
             Double(pricePerSwipe.text!) != nil &&
-            location.text != "")
+            location.text != "" &&
+            phoneNumber.text!.count == 10 &&
+            time.text != "")
         {
             saveButton.isEnabled = true
         }
