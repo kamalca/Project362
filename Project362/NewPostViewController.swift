@@ -66,6 +66,11 @@ class NewPostViewController: UIViewController {
         saveButton.isEnabled = false
     }
     @IBAction func editingDidEnd(_ sender: UITextField) {
+        if let number = phoneNumber.text
+        {
+            print(String(number.filter { "01234567890".contains($0) }))
+            phoneNumber.text = String(number.filter { "01234567890".contains($0) })
+        }
         if (Int(numberOfSwipes.text!) != nil &&
             Double(pricePerSwipe.text!) != nil &&
             location.text != "")
