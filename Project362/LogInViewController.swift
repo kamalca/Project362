@@ -32,7 +32,7 @@ class LogInViewController: UIViewController {
             case .success(let grantedPermissions, let declinedPermissions, let accessToken):
                 
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "PostView")
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "LaunchView")
                 self.present(nextViewController, animated:false, completion:nil)
             }
         }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MIf-rO-3Xf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -55,10 +55,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="MIf-rO-3Xf" kind="show" identifier="LogIn" id="xf0-W9-TNf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7.2000000000000002" y="35.532233883058474"/>
+            <point key="canvasLocation" x="-815" y="480"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="KcX-Qr-4gv">
@@ -293,61 +296,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kDT-X7-Bn2">
-                                <rect key="frame" x="67" y="145" width="241" height="128"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKz-Oj-KIF">
-                                <rect key="frame" x="67" y="145" width="240" height="128"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GWu-Io-oRe">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Swap" translatesAutoresizingMaskIntoConstraints="NO" id="IUG-FC-k5M">
+                                        <rect key="frame" x="-7" y="123" width="388" height="207"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="207" id="wYa-tE-kpU"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.9680214524269104" green="0.99653750658035278" blue="0.54492771625518799" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="BT7-MH-tHD"/>
+                                    <constraint firstItem="IUG-FC-k5M" firstAttribute="leading" secondItem="GWu-Io-oRe" secondAttribute="leading" constant="-7" id="83e-Kt-0KA"/>
+                                    <constraint firstItem="IUG-FC-k5M" firstAttribute="top" secondItem="GWu-Io-oRe" secondAttribute="top" constant="123" id="LkQ-hx-juM"/>
+                                    <constraint firstItem="IUG-FC-k5M" firstAttribute="centerX" secondItem="GWu-Io-oRe" secondAttribute="centerX" id="zqG-dV-PFo"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="BUY">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="ueC-Ug-UzU" kind="show" id="dJ2-mP-yX5"/>
-                                </connections>
-                            </button>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mNV-Lt-J7I">
-                                <rect key="frame" x="67" y="384" width="241" height="128"/>
+                                <rect key="frame" x="195" y="525" width="160" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZv-tP-jlT">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="JiD-ix-u32"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <state key="normal" title="SELL">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="ueC-Ug-UzU" kind="show" id="PTE-aS-1Jk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZv-tP-jlT">
-                                <rect key="frame" x="67" y="384" width="240" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="itV-5E-wO7"/>
+                                    <constraint firstAttribute="height" constant="90" id="Bzo-TB-Ax4"/>
+                                    <constraint firstAttribute="width" constant="160" id="HGh-YQ-Q0h"/>
+                                    <constraint firstItem="CZv-tP-jlT" firstAttribute="top" secondItem="mNV-Lt-J7I" secondAttribute="top" id="RHL-In-qRp"/>
+                                    <constraint firstItem="CZv-tP-jlT" firstAttribute="leading" secondItem="mNV-Lt-J7I" secondAttribute="leading" id="jP3-6n-eCt"/>
+                                    <constraint firstAttribute="bottom" secondItem="CZv-tP-jlT" secondAttribute="bottom" id="uO7-1i-HsP"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <state key="normal" title="SELL">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="ueC-Ug-UzU" kind="show" id="PTE-aS-1Jk"/>
-                                </connections>
-                            </button>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kDT-X7-Bn2">
+                                <rect key="frame" x="20" y="525" width="160" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKz-Oj-KIF">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="BUY">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="ueC-Ug-UzU" kind="show" id="dJ2-mP-yX5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="WYK-yN-LIt"/>
+                                    <constraint firstAttribute="width" constant="160" id="q8b-6L-4aK"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="kDT-X7-Bn2" firstAttribute="leading" secondItem="mNV-Lt-J7I" secondAttribute="leading" id="89Z-qX-6a3"/>
-                            <constraint firstItem="CZv-tP-jlT" firstAttribute="leading" secondItem="mNV-Lt-J7I" secondAttribute="leading" id="CKC-Uk-oWE"/>
-                            <constraint firstItem="jKz-Oj-KIF" firstAttribute="top" secondItem="N1a-IO-EX0" secondAttribute="top" constant="81" id="DBk-bs-reF"/>
-                            <constraint firstItem="kDT-X7-Bn2" firstAttribute="top" secondItem="N1a-IO-EX0" secondAttribute="top" constant="81" id="DPn-a8-p99"/>
-                            <constraint firstItem="kDT-X7-Bn2" firstAttribute="trailing" secondItem="mNV-Lt-J7I" secondAttribute="trailing" id="EJV-YP-09n"/>
-                            <constraint firstItem="CZv-tP-jlT" firstAttribute="trailing" secondItem="jKz-Oj-KIF" secondAttribute="trailing" id="H8U-Nc-2ja"/>
-                            <constraint firstItem="jKz-Oj-KIF" firstAttribute="centerX" secondItem="ThL-PP-KMg" secondAttribute="centerX" id="Ia4-8v-Nd3"/>
-                            <constraint firstItem="kDT-X7-Bn2" firstAttribute="bottom" secondItem="jKz-Oj-KIF" secondAttribute="bottom" id="Kxv-PG-S6L"/>
-                            <constraint firstItem="CZv-tP-jlT" firstAttribute="leading" secondItem="jKz-Oj-KIF" secondAttribute="leading" id="LYr-Np-W9u"/>
-                            <constraint firstItem="CZv-tP-jlT" firstAttribute="bottom" secondItem="mNV-Lt-J7I" secondAttribute="bottom" id="Urx-V2-b7E"/>
-                            <constraint firstItem="mNV-Lt-J7I" firstAttribute="leading" secondItem="N1a-IO-EX0" secondAttribute="leading" constant="67" id="XSB-eg-qpD"/>
-                            <constraint firstItem="N1a-IO-EX0" firstAttribute="bottom" secondItem="mNV-Lt-J7I" secondAttribute="bottom" constant="155" id="iGe-Ia-yLE"/>
-                            <constraint firstItem="CZv-tP-jlT" firstAttribute="centerX" secondItem="mNV-Lt-J7I" secondAttribute="centerX" id="p77-uF-p2K"/>
-                            <constraint firstItem="CZv-tP-jlT" firstAttribute="top" secondItem="mNV-Lt-J7I" secondAttribute="top" id="twR-Kc-qzg"/>
+                            <constraint firstItem="GWu-Io-oRe" firstAttribute="leading" secondItem="ThL-PP-KMg" secondAttribute="leading" id="0Zf-LG-qTz"/>
+                            <constraint firstItem="mNV-Lt-J7I" firstAttribute="top" secondItem="N1a-IO-EX0" secondAttribute="top" constant="461" id="CbA-WV-lnU"/>
+                            <constraint firstAttribute="trailing" secondItem="GWu-Io-oRe" secondAttribute="trailing" id="Cdg-a9-2UD"/>
+                            <constraint firstItem="N1a-IO-EX0" firstAttribute="trailing" secondItem="mNV-Lt-J7I" secondAttribute="trailing" constant="20" id="VDJ-Dn-kBJ" userLabel="Safe Area.trailing = View.trailing + 25"/>
+                            <constraint firstItem="kDT-X7-Bn2" firstAttribute="leading" secondItem="N1a-IO-EX0" secondAttribute="leading" constant="20" id="WvE-BO-TFn" userLabel="View.leading = Safe Area.leading + 25"/>
+                            <constraint firstItem="GWu-Io-oRe" firstAttribute="top" secondItem="N1a-IO-EX0" secondAttribute="top" id="i0D-Jc-06f"/>
+                            <constraint firstItem="GWu-Io-oRe" firstAttribute="bottom" secondItem="N1a-IO-EX0" secondAttribute="bottom" id="q2y-3N-6Al"/>
+                            <constraint firstItem="mNV-Lt-J7I" firstAttribute="top" secondItem="kDT-X7-Bn2" secondAttribute="top" id="svh-9O-JhF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N1a-IO-EX0"/>
                     </view>
@@ -431,7 +458,7 @@
         <!--Navigation Controller-->
         <scene sceneID="SBY-kf-hNq">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MIf-rO-3Xf" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LaunchView" automaticallyAdjustsScrollViewInsets="NO" id="MIf-rO-3Xf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gZY-BK-SOM">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -467,8 +494,9 @@
     </scenes>
     <resources>
         <image name="Background" width="1242" height="2208"/>
+        <image name="Swap" width="2100" height="1500"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PTE-aS-1Jk"/>
+        <segue reference="dJ2-mP-yX5"/>
     </inferredMetricsTieBreakers>
 </document>
