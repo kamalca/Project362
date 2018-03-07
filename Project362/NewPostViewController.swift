@@ -16,6 +16,8 @@ class NewPostViewController: UIViewController {
     @IBOutlet weak var pricePerSwipe: UITextField!
     @IBOutlet weak var location: UITextField!
     @IBOutlet weak var comments: UITextView!
+    @IBOutlet weak var time: UITextField!
+    @IBOutlet weak var phoneNumber: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()

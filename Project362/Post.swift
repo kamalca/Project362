@@ -11,13 +11,13 @@ import Foundation
 struct Post { 
 	let postID: String
 	let name: String
-	let price: Sring
+	let price: String
 	let swipes: String	
 	let location: String
 	let time: String
 	let phoneNumber: String
 	let comments: String
-	let buyer: Boolean
+	let buyer: Bool
 	
 	
 	init?(postID: String, dict: [String: Any]) {
@@ -30,7 +30,7 @@ struct Post {
 		let time = dict["time"] as? String,
 		let phoneNumber = dict["phoneNumber"] as? String,
         let comments = dict["comments"] as? String, 
-		let buyer = dict["buyer"] as? Boolean
+		let buyer = dict["buyer"] as? Bool
 		else { fatalError() }
 		
 		self.name = name
