@@ -19,16 +19,17 @@ class PostTableViewController: UITableViewController {
     var displayedPosts = [Post]()
 	@IBOutlet weak var postsTableView: UITableView!
     
+    @IBOutlet weak var navBar: UINavigationItem!
+    
     func reload() {
         displayedPosts = [Post]()
         DatabaseService.shared.postsReference.observe(DataEventType.value, with: { (snapshot) in
             guard let postsSnapshot = PostsSnapshot(with: snapshot) else { return }
             self.posts = postsSnapshot.posts
-            //            self.posts.sort(by: { (post1, post2) -> Bool in
-            //                return post1.time > post2.time
-            //            })
+            
+            //Filter
             for post in self.posts{
-                if (post.buyer == self.buying)
+                if (post.buyer != self.buying)
                 {
                     if(self.filter == "" || post.location == self.filter)
                     {
@@ -36,6 +37,12 @@ class PostTableViewController: UITableViewController {
                     }
                 }
             }
+            
+            //Sort
+            self.displayedPosts.sort(by: { (post1, post2) -> Bool in
+                return Double(post1.price)! < Double(post2.price)!
+            })
+            
             self.postsTableView.reloadData()
         })
     }
@@ -43,6 +50,13 @@ class PostTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		self.navigationController?.isNavigationBarHidden = false
+        if (buying)
+        {
+            navBar.title = "Sellers"
+        }
+        else{
+            navBar.title = "Buyers"
+        }
         reload()
 		
         // Uncomment the following line to preserve selection between presentations

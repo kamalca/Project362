@@ -76,7 +76,8 @@ class NewPostViewController: UIViewController {
             Double(pricePerSwipe.text!) != nil &&
             location.text != "" &&
             phoneNumber.text!.count == 10 &&
-            time.text != "")
+            time.text != "" &&
+            )
         {
             saveButton.isEnabled = true
         }
