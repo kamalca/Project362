@@ -18,7 +18,7 @@ class PostInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         postInfoLabel.numberOfLines = 0
-        postInfoLabel.text = posts[postIndex].postID
+        postInfoLabel.text = "Seller Name: \(posts[postIndex].name) \n\nNumber of Swipes: \(posts[postIndex].swipes) \n\nPrice of Each Swipe: \(posts[postIndex].price) \n\nLocation: \(posts[postIndex].location) \n\nComments: \(posts[postIndex].comments)"
         
         // Do any additional setup after loading the view.
     }

@@ -42,7 +42,7 @@ class NewPostViewController: UIViewController {
     }
     @IBAction func editingDidEnd(_ sender: UITextField) {
         if (Int(numberOfSwipes.text!) != nil &&
-            Int(pricePerSwipe.text!) != nil &&
+            Double(pricePerSwipe.text!) != nil &&
             location.text != "")
         {
             saveButton.isEnabled = true

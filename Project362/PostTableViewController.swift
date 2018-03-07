@@ -120,14 +120,14 @@ class PostTableViewController: UITableViewController {
         var color: Int = indexPath.row
         color *= 36
         color /= 10
-        let red: CGFloat = CGFloat(colorWave[(color+120)%360]) / 255
-        let green: CGFloat = CGFloat(colorWave[(color%360)]) / 255
-        let blue:CGFloat = CGFloat(colorWave[(color+240)%360]) / 255
+        //let red: CGFloat = CGFloat(colorWave[(color+120)%360]) / 255
+        //let green: CGFloat = CGFloat(colorWave[(color%360)]) / 255
+        //let blue:CGFloat = CGFloat(colorWave[(color+240)%360]) / 255
         //cell.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 0.75)
         //cell.postSummaryLabel.text = "Post Summary"
 		
-		cell.postTitleLabel.text = posts[indexPath.row].name
-		cell.postSummaryLabel.text = posts[indexPath.row].postID
+		cell.postTitleLabel.text = "Selling " + posts[indexPath.row].swipes + " swipes for $" + posts[indexPath.row].price + " each"
+        cell.postSummaryLabel.text = "Sold By: " + posts[indexPath.row].name
         
         return cell
     }
