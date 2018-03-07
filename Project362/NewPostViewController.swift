@@ -28,9 +28,11 @@ class NewPostViewController: UIViewController {
         dismiss(animated: true) {
             print("Save Data")
             let parameters: [String:Any] = ["name"	: "Kameron",
-							  "price"	: Double(self.pricePerSwipe.text!),
-							  "swipes"	: Int(self.numberOfSwipes.text!),
+							  "price"	: self.pricePerSwipe.text!,
+							  "swipes"	: self.numberOfSwipes.text!,
 							  "location": self.location.text!,
+							  "time"	: self.time.text!,
+							  "phoneNumber": self.phoneNumber.text!,
 							  "comments": self.comments.text]
             
             
