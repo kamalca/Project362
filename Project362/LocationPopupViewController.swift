@@ -8,28 +8,49 @@
 
 import UIKit
 
-class LocationPopupViewController: UIViewController {
-
+class LocationPopupViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var locationPicker: UIPickerView!
+    @IBOutlet weak var saveLocation: UIButton!
+    
+    var loc = ""
+    
+    let locations = ["BPlate", "Covel", "De Neve", "Feast", "Rendezvous"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        locationPicker.delegate = self
+        locationPicker.dataSource = self
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return locations.count
     }
-    */
-
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return locations[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        loc = locations[row]
+    }
+    
+    
+    @IBAction func saveLocation_TouchUpInside(_ sender: UIButton) {
+        //let filterVC = storyboard?.instantiateViewController(withIdentifier: "filterVC") as! FilterViewController
+        //filterVC.locationSelected = loc
+        //navigationController?.pushViewController(filterVC, animated: true)
+        
+        
+        dismiss(animated: true)
+    }
 }
+
