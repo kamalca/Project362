@@ -326,20 +326,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GWu-Io-oRe">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="-53" width="375" height="720"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Swap" translatesAutoresizingMaskIntoConstraints="NO" id="IUG-FC-k5M">
-                                        <rect key="frame" x="-7" y="33" width="388" height="388"/>
+                                        <rect key="frame" x="0.0" y="144" width="375" height="388"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="388" id="Oqj-8g-bZH"/>
+                                            <constraint firstAttribute="height" constant="388" id="IQC-s3-vIb"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.73282510042190552" green="0.87279850244522095" blue="0.98826926946640015" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="IUG-FC-k5M" firstAttribute="top" secondItem="GWu-Io-oRe" secondAttribute="top" constant="33" id="I8z-qk-d1e"/>
-                                    <constraint firstItem="IUG-FC-k5M" firstAttribute="leading" secondItem="GWu-Io-oRe" secondAttribute="leading" constant="-7" id="IrJ-ZP-J90"/>
-                                    <constraint firstItem="IUG-FC-k5M" firstAttribute="centerX" secondItem="GWu-Io-oRe" secondAttribute="centerX" id="aca-Gb-qez"/>
+                                    <constraint firstAttribute="trailing" secondItem="IUG-FC-k5M" secondAttribute="trailing" id="dCj-ty-o3d"/>
+                                    <constraint firstItem="IUG-FC-k5M" firstAttribute="leading" secondItem="GWu-Io-oRe" secondAttribute="leading" id="tVC-fp-oeY"/>
+                                    <constraint firstItem="IUG-FC-k5M" firstAttribute="top" secondItem="GWu-Io-oRe" secondAttribute="top" constant="144" id="vr6-Qh-eet"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mNV-Lt-J7I">
+                                <rect key="frame" x="62" y="507" width="250" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZv-tP-jlT">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="s5B-zO-UlZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <state key="normal" title="SELL">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sell:" destination="JNK-IB-dNU" eventType="touchUpInside" id="nBv-fo-Jzd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.28651788830757141" green="0.5100024938583374" blue="0.72554081678390503" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="CZv-tP-jlT" secondAttribute="trailing" id="BSV-uu-ZqX"/>
+                                    <constraint firstItem="CZv-tP-jlT" firstAttribute="leading" secondItem="mNV-Lt-J7I" secondAttribute="leading" id="J0b-Rt-m1N"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="ez9-CP-uMw"/>
+                                    <constraint firstItem="CZv-tP-jlT" firstAttribute="top" secondItem="mNV-Lt-J7I" secondAttribute="top" id="j4W-vF-FWx"/>
+                                    <constraint firstAttribute="bottom" secondItem="CZv-tP-jlT" secondAttribute="bottom" id="rrM-nJ-OaB"/>
+                                    <constraint firstItem="CZv-tP-jlT" firstAttribute="centerX" secondItem="mNV-Lt-J7I" secondAttribute="centerX" id="sM1-Vs-c5w"/>
+                                    <constraint firstAttribute="height" constant="90" id="y7C-IF-ma5"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kDT-X7-Bn2">
@@ -372,39 +401,10 @@
                                     <constraint firstAttribute="bottom" secondItem="jKz-Oj-KIF" secondAttribute="bottom" id="qgJ-dX-ZzQ"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mNV-Lt-J7I">
-                                <rect key="frame" x="62" y="507" width="250" height="90"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZv-tP-jlT">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="90"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="250" id="s5B-zO-UlZ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                        <state key="normal" title="SELL">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="sell:" destination="JNK-IB-dNU" eventType="touchUpInside" id="nBv-fo-Jzd"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.28651788830757141" green="0.5100024938583374" blue="0.72554081678390503" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="CZv-tP-jlT" secondAttribute="trailing" id="BSV-uu-ZqX"/>
-                                    <constraint firstItem="CZv-tP-jlT" firstAttribute="leading" secondItem="mNV-Lt-J7I" secondAttribute="leading" id="J0b-Rt-m1N"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="ez9-CP-uMw"/>
-                                    <constraint firstItem="CZv-tP-jlT" firstAttribute="top" secondItem="mNV-Lt-J7I" secondAttribute="top" id="j4W-vF-FWx"/>
-                                    <constraint firstAttribute="bottom" secondItem="CZv-tP-jlT" secondAttribute="bottom" id="rrM-nJ-OaB"/>
-                                    <constraint firstItem="CZv-tP-jlT" firstAttribute="centerX" secondItem="mNV-Lt-J7I" secondAttribute="centerX" id="sM1-Vs-c5w"/>
-                                    <constraint firstAttribute="height" constant="90" id="y7C-IF-ma5"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="GWu-Io-oRe" firstAttribute="top" secondItem="N1a-IO-EX0" secondAttribute="top" id="9kH-n1-I93"/>
+                            <constraint firstItem="GWu-Io-oRe" firstAttribute="top" secondItem="N1a-IO-EX0" secondAttribute="top" constant="-117" id="9kH-n1-I93"/>
                             <constraint firstItem="kDT-X7-Bn2" firstAttribute="centerX" secondItem="ThL-PP-KMg" secondAttribute="centerX" id="B24-gd-8AO"/>
                             <constraint firstItem="kDT-X7-Bn2" firstAttribute="centerX" secondItem="mNV-Lt-J7I" secondAttribute="centerX" id="CNh-1L-Y91"/>
                             <constraint firstItem="GWu-Io-oRe" firstAttribute="leading" secondItem="N1a-IO-EX0" secondAttribute="leading" id="F1T-4g-8pD"/>
