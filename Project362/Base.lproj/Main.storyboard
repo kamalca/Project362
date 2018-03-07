@@ -589,6 +589,78 @@
             </objects>
             <point key="canvasLocation" x="1828" y="597"/>
         </scene>
+        <!--Time Popup View Controller-->
+        <scene sceneID="XaE-ht-NrB">
+            <objects>
+                <viewController id="nSX-Rz-t8n" customClass="TimePopupViewController" customModule="Project362" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LAP-pM-Tn4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eO8-75-Ny8">
+                                <rect key="frame" x="67" y="212" width="240" height="207"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vS-zv-7RJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="35"/>
+                                        <color key="backgroundColor" red="0.530245576" green="0.83252550059999997" blue="0.98720854920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="yrL-RS-qM8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfA-IN-ffU">
+                                        <rect key="frame" x="95" y="169" width="51" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Select"/>
+                                        <connections>
+                                            <action selector="saveTime_TouchUpInside:" destination="nSX-Rz-t8n" eventType="touchUpInside" id="9k0-1T-qnG"/>
+                                        </connections>
+                                    </button>
+                                    <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="DwX-6W-xif">
+                                        <rect key="frame" x="0.0" y="43" width="240" height="126"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="542006527.86193299">
+                                            <!--2018-03-06 05:22:07 +0000-->
+                                        </date>
+                                    </datePicker>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="6vS-zv-7RJ" secondAttribute="trailing" id="7LH-WS-7t5"/>
+                                    <constraint firstItem="DwX-6W-xif" firstAttribute="leading" secondItem="eO8-75-Ny8" secondAttribute="leading" id="9l0-rS-ha6"/>
+                                    <constraint firstItem="6vS-zv-7RJ" firstAttribute="leading" secondItem="eO8-75-Ny8" secondAttribute="leading" id="Aos-lI-40l"/>
+                                    <constraint firstItem="6vS-zv-7RJ" firstAttribute="top" secondItem="eO8-75-Ny8" secondAttribute="top" id="Dei-kj-WKY"/>
+                                    <constraint firstItem="RfA-IN-ffU" firstAttribute="top" secondItem="DwX-6W-xif" secondAttribute="bottom" id="Swj-Pj-3SU"/>
+                                    <constraint firstItem="DwX-6W-xif" firstAttribute="top" secondItem="6vS-zv-7RJ" secondAttribute="bottom" constant="8" id="aXd-1y-tm4"/>
+                                    <constraint firstItem="RfA-IN-ffU" firstAttribute="centerX" secondItem="eO8-75-Ny8" secondAttribute="centerX" id="cIz-vg-f25"/>
+                                    <constraint firstAttribute="trailing" secondItem="DwX-6W-xif" secondAttribute="trailing" id="cWc-j6-he6"/>
+                                    <constraint firstAttribute="bottom" secondItem="RfA-IN-ffU" secondAttribute="bottom" constant="4" id="edK-4o-PRQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="RfA-IN-ffU" secondAttribute="trailing" constant="94" id="gKP-AH-fAF"/>
+                                    <constraint firstItem="RfA-IN-ffU" firstAttribute="centerX" secondItem="eO8-75-Ny8" secondAttribute="centerX" id="hnx-9E-zcy"/>
+                                    <constraint firstItem="RfA-IN-ffU" firstAttribute="leading" secondItem="eO8-75-Ny8" secondAttribute="leading" constant="95" id="kF6-Rf-wT8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.56096178760000004" green="0.56096178760000004" blue="0.56096178760000004" alpha="0.4963963468" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="g8y-KZ-Xv2" firstAttribute="trailing" secondItem="eO8-75-Ny8" secondAttribute="trailing" constant="68" id="503-Cw-9w8"/>
+                            <constraint firstItem="eO8-75-Ny8" firstAttribute="top" secondItem="g8y-KZ-Xv2" secondAttribute="top" constant="192" id="IDh-yl-N11"/>
+                            <constraint firstItem="g8y-KZ-Xv2" firstAttribute="bottom" secondItem="eO8-75-Ny8" secondAttribute="bottom" constant="248" id="saS-Cu-DuR"/>
+                            <constraint firstItem="eO8-75-Ny8" firstAttribute="leading" secondItem="g8y-KZ-Xv2" secondAttribute="leading" constant="67" id="uUb-KA-cVE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="g8y-KZ-Xv2"/>
+                    </view>
+                    <connections>
+                        <outlet property="saveTime" destination="RfA-IN-ffU" id="Wva-GL-YhJ"/>
+                        <outlet property="timeLabel" destination="6vS-zv-7RJ" id="rih-GO-Roj"/>
+                        <outlet property="timePicker" destination="DwX-6W-xif" id="YZJ-6S-dVf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g7b-HX-t1m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4582" y="725"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Swap" width="720" height="720"/>

@@ -24,6 +24,7 @@
 		00F7D9692038C31400D4CE32 /* Project362Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F7D9682038C31400D4CE32 /* Project362Tests.swift */; };
 		00F7D9742038C31400D4CE32 /* Project362UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F7D9732038C31400D4CE32 /* Project362UITests.swift */; };
 		3339DB5C323E856F79BF92B6 /* Pods_Project362UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A266D6B0B6C6FCC95268C3B8 /* Pods_Project362UITests.framework */; };
+		634A02242050B0DC00948984 /* TimePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634A02232050B0DC00948984 /* TimePopupViewController.swift */; };
 		637F1F46204FC92400E808D5 /* LocationPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637F1F45204FC92400E808D5 /* LocationPopupViewController.swift */; };
 		864A71B84DB8B17DB1ABBF6F /* Pods_Project362.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D734BF8AE82631BC07B194 /* Pods_Project362.framework */; };
 		D7579743C667BD8EA097EEA9 /* Pods_Project362Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92DDD3050642295513033DC /* Pods_Project362Tests.framework */; };
@@ -74,6 +75,7 @@
 		2A7972EAA49322DD1DA88519 /* Pods-Project362Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project362Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project362Tests/Pods-Project362Tests.release.xcconfig"; sourceTree = "<group>"; };
 		33D734BF8AE82631BC07B194 /* Pods_Project362.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project362.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54234B97FAF4912474FF20BB /* Pods-Project362.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project362.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project362/Pods-Project362.debug.xcconfig"; sourceTree = "<group>"; };
+		634A02232050B0DC00948984 /* TimePopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePopupViewController.swift; sourceTree = "<group>"; };
 		637F1F45204FC92400E808D5 /* LocationPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPopupViewController.swift; sourceTree = "<group>"; };
 		97CDCA6E44C3B293FBA69011 /* Pods-Project362UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project362UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project362UITests/Pods-Project362UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		996C13C38ED7FFD86D090BD2 /* Pods-Project362Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project362Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project362Tests/Pods-Project362Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 		00F7D9522038C31400D4CE32 /* Project362 */ = {
 			isa = PBXGroup;
 			children = (
+				634A02232050B0DC00948984 /* TimePopupViewController.swift */,
 				00F7D9532038C31400D4CE32 /* AppDelegate.swift */,
 				00F7D9552038C31400D4CE32 /* LogInViewController.swift */,
 				00A6E6AE203E7BA500039D67 /* PostTableViewController.swift */,
@@ -519,6 +522,7 @@
 				637F1F46204FC92400E808D5 /* LocationPopupViewController.swift in Sources */,
 				00197124204B7AC4003E4757 /* PostsSnapshot.swift in Sources */,
 				00844FFB2047AE6D009CE4B2 /* PostInfoViewController.swift in Sources */,
+				634A02242050B0DC00948984 /* TimePopupViewController.swift in Sources */,
 				00F7D9542038C31400D4CE32 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
