@@ -287,10 +287,10 @@
             </objects>
             <point key="canvasLocation" x="3589.5999999999999" y="709.29535232383819"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="XSA-u7-XaR">
             <objects>
-                <viewController id="JNK-IB-dNU" sceneMemberID="viewController">
+                <viewController id="JNK-IB-dNU" customClass="WelcomeViewController" customModule="Project362" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ThL-PP-KMg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -325,7 +325,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="mkY-Eq-gLK" kind="show" id="llK-zP-75K"/>
+                                            <action selector="sell:" destination="JNK-IB-dNU" eventType="touchUpInside" id="nBv-fo-Jzd"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -352,7 +352,7 @@
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="mkY-Eq-gLK" kind="show" id="i4i-dU-2Z2"/>
+                                            <action selector="buy:" destination="JNK-IB-dNU" eventType="touchUpInside" id="GyT-Rb-uD4"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -378,6 +378,9 @@
                         <viewLayoutGuide key="safeArea" id="N1a-IO-EX0"/>
                     </view>
                     <navigationItem key="navigationItem" id="tAH-oa-YLK"/>
+                    <connections>
+                        <segue destination="mkY-Eq-gLK" kind="show" identifier="showTable" id="wfa-Wa-PcW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PkZ-tx-tj5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -540,7 +543,4 @@
     <resources>
         <image name="Swap" width="2100" height="1500"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="i4i-dU-2Z2"/>
-    </inferredMetricsTieBreakers>
 </document>

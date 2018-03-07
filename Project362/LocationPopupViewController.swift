@@ -49,15 +49,8 @@ class LocationPopupViewController: UIViewController, UIPickerViewDataSource, UIP
         
         // clear any previous filters here
         
-        if loc != "No Filter" {
-            let query = DatabaseService.shared.postsReference.queryOrdered(byChild: "location").queryEqual(toValue: loc)
-            query.observe(.value, with: { (snapshot) in
-                for childSnapshot in snapshot.children {
-                    print(childSnapshot)
-                }
-            })
-        }
-        else {
+        if(loc == "No Filter")
+        {
             loc = ""
         }
         

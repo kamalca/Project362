@@ -11,6 +11,7 @@
 		00197125204B7AC4003E4757 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00197122204B7AC3003E4757 /* Post.swift */; };
 		00197126204B7AC4003E4757 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00197123204B7AC4003E4757 /* DatabaseService.swift */; };
 		0047C9C32047A136006FDA55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0047C9C22047A135006FDA55 /* GoogleService-Info.plist */; };
+		005C0F22204FEAB300024206 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005C0F21204FEAB300024206 /* WelcomeViewController.swift */; };
 		00844FFB2047AE6D009CE4B2 /* PostInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00844FFA2047AE6D009CE4B2 /* PostInfoViewController.swift */; };
 		00A6E6AF203E7BA500039D67 /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A6E6AE203E7BA500039D67 /* PostTableViewController.swift */; };
 		00A6E6B1203E7C7C00039D67 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A6E6B0203E7C7C00039D67 /* PostTableViewCell.swift */; };
@@ -50,6 +51,7 @@
 		00197122204B7AC3003E4757 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		00197123204B7AC4003E4757 /* DatabaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		0047C9C22047A135006FDA55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		005C0F21204FEAB300024206 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		00844FFA2047AE6D009CE4B2 /* PostInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInfoViewController.swift; sourceTree = "<group>"; };
 		00A6E6AE203E7BA500039D67 /* PostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
 		00A6E6B0203E7C7C00039D67 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				00197121204B7AC3003E4757 /* PostsSnapshot.swift */,
 				00A6E6B0203E7C7C00039D67 /* PostTableViewCell.swift */,
 				637F1F45204FC92400E808D5 /* LocationPopupViewController.swift */,
+				005C0F21204FEAB300024206 /* WelcomeViewController.swift */,
 				00F7D9572038C31400D4CE32 /* Main.storyboard */,
 				00F55E81204F421500970ACF /* NewPostViewController.swift */,
 				00844FFA2047AE6D009CE4B2 /* PostInfoViewController.swift */,
@@ -508,6 +511,7 @@
 			files = (
 				00197126204B7AC4003E4757 /* DatabaseService.swift in Sources */,
 				00A6E6AF203E7BA500039D67 /* PostTableViewController.swift in Sources */,
+				005C0F22204FEAB300024206 /* WelcomeViewController.swift in Sources */,
 				00A6E6B1203E7C7C00039D67 /* PostTableViewCell.swift in Sources */,
 				00197125204B7AC4003E4757 /* Post.swift in Sources */,
 				00F7D9562038C31400D4CE32 /* LogInViewController.swift in Sources */,

@@ -13,21 +13,37 @@ class PostTableViewController: UITableViewController {
     
     var tappedPostIndex: Int = 0
     var filter: String = ""
+    var buying: Bool = false
 	
     var posts = [Post]()
+    var displayedPosts = [Post]()
 	@IBOutlet weak var postsTableView: UITableView!
+    
+    func reload() {
+        displayedPosts = [Post]()
+        DatabaseService.shared.postsReference.observe(DataEventType.value, with: { (snapshot) in
+            guard let postsSnapshot = PostsSnapshot(with: snapshot) else { return }
+            self.posts = postsSnapshot.posts
+            //            self.posts.sort(by: { (post1, post2) -> Bool in
+            //                return post1.time > post2.time
+            //            })
+            for post in self.posts{
+                if (post.buyer == self.buying)
+                {
+                    if(self.filter == "" || post.location == self.filter)
+                    {
+                        self.displayedPosts.append(post)
+                    }
+                }
+            }
+            self.postsTableView.reloadData()
+        })
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-		DatabaseService.shared.postsReference.observe(DataEventType.value, with: { (snapshot) in
-			guard let postsSnapshot = PostsSnapshot(with: snapshot) else { return }
-			print(snapshot)
-            self.posts = postsSnapshot.posts
-            self.posts.sort(by: { (post1, post2) -> Bool in
-                return post1.time > post2.time
-            })
-			self.postsTableView.reloadData()
-		})
+		
+        reload()
 		
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -47,7 +63,7 @@ class PostTableViewController: UITableViewController {
             
             //pass data here
             destination.postIndex = tappedPostIndex
-            destination.posts = self.posts
+            destination.posts = self.displayedPosts
             
         }
         
@@ -61,7 +77,7 @@ class PostTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return posts.count
+        return displayedPosts.count
     }
 
     
@@ -77,14 +93,14 @@ class PostTableViewController: UITableViewController {
         var color: Int = indexPath.row
         color *= 36
         color /= 10
-		if(!posts[indexPath.row].buyer)
+		if(!displayedPosts[indexPath.row].buyer)
         {
-            cell.postTitleLabel.text = "Selling " + String(posts[indexPath.row].swipes) + " swipes for $" + String(posts[indexPath.row].price) + " each"
-            cell.postSummaryLabel.text = "Sold By: " + posts[indexPath.row].name
+            cell.postTitleLabel.text = "Selling " + String(displayedPosts[indexPath.row].swipes) + " swipes for $" + String(displayedPosts[indexPath.row].price) + " each"
+            cell.postSummaryLabel.text = "Sold By: " + displayedPosts[indexPath.row].name
         }
         else{
-            cell.postTitleLabel.text = "Requesting " + String(posts[indexPath.row].swipes) + " swipes for $" + String(posts[indexPath.row].price) + " each"
-            cell.postSummaryLabel.text = "Requested By: " + posts[indexPath.row].name
+            cell.postTitleLabel.text = "Requesting " + String(displayedPosts[indexPath.row].swipes) + " swipes for $" + String(displayedPosts[indexPath.row].price) + " each"
+            cell.postSummaryLabel.text = "Requested By: " + displayedPosts[indexPath.row].name
         }
         
         return cell
@@ -96,7 +112,7 @@ class PostTableViewController: UITableViewController {
     }
     
     @IBAction func unwind(segue:UIStoryboardSegue) {
-        print(filter)
+        reload()
     }
     /*
     // Override to support conditional editing of the table view.
