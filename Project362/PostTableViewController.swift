@@ -42,7 +42,7 @@ class PostTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-		
+		self.navigationController?.isNavigationBarHidden = false
         reload()
 		
         // Uncomment the following line to preserve selection between presentations
