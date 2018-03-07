@@ -41,7 +41,7 @@ class NewPostViewController: UIViewController {
 							  "time"	: self.time.text!,
 							  "phoneNumber": self.phoneNumber.text!,
 							  "comments": self.comments.text,
-                              "buyer": self.BuyOrSell.isEnabledForSegment(at: 1)]
+                              "buyer": self.BuyOrSell.selectedSegmentIndex == 0]
             
             
 //            UserProfile.loadCurrent({ (result) in
