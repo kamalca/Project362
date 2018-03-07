@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LocationPopupViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
@@ -16,7 +17,7 @@ class LocationPopupViewController: UIViewController, UIPickerViewDataSource, UIP
     
     var loc = ""
     
-    let locations = ["BPlate", "Covel", "De Neve", "Feast", "BCafe", "Cafe 1919", "Rendezvous", "The Study"]
+    let locations = ["No Filter", "BPlate", "Covel", "De Neve", "Feast", "BCafe", "Cafe 1919", "Rendezvous", "The Study"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +47,16 @@ class LocationPopupViewController: UIViewController, UIPickerViewDataSource, UIP
     
     @IBAction func saveLocation_TouchUpInside(_ sender: UIButton) {
         
-        DatabaseService.shared.postsReference.queryEqual(toValue: loc, childKey: "location")
+        // clear any previous filters here
+        
+        if loc != "No Filter" {
+            let query = DatabaseService.shared.postsReference.queryOrdered(byChild: "location").queryEqual(toValue: loc)
+            query.observe(.value, with: { (snapshot) in
+                for childSnapshot in snapshot.children {
+                    print(childSnapshot)
+                }
+            })
+        }
         
         dismiss(animated: true)
     }
