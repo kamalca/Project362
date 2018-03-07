@@ -20,7 +20,8 @@ class NewPostViewController: UIViewController {
     @IBOutlet weak var phoneNumber: UITextField!
     @IBOutlet weak var comments: UITextView!
     
-    let dateFormatter = DateFormatter()
+    let dateReader = DateFormatter()
+    let dateWriter = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,11 @@ class NewPostViewController: UIViewController {
         // Do any additional setup after loading the view.
         saveButton.isEnabled = false
         
-        DateFormatter.dateFormat(fromTemplate: "MM-YY hh:mm", options: 0, locale: nil)
+        //DateFormatter.dateFormat(fromTemplate: "MM-YY hh:mm", options: 0, locale: nil)
+        dateReader.locale = Locale(identifier: "en_US_POSIX")
+        dateWriter.locale = Locale(identifier: "en_US_POSIX")
+        dateReader.dateFormat = "YYYY/MM/dd HH:mm a"
+        dateWriter.dateFormat = "MM/dd HH:mm a"
     }
 
     @IBAction func save(_ sender: Any) {
@@ -77,8 +82,9 @@ class NewPostViewController: UIViewController {
             location.text != "" &&
             phoneNumber.text!.count == 10 &&
             time.text != "" &&
-            )
+            dateReader.date(from: "2018/" + time.text!) != nil)
         {
+            print( dateWriter.string(from: dateReader.date(from: "2018/" + time.text!)!) )
             saveButton.isEnabled = true
         }
         else
