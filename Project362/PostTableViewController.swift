@@ -126,7 +126,7 @@ class PostTableViewController: UITableViewController {
         //cell.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 0.75)
         //cell.postSummaryLabel.text = "Post Summary"
 		
-		cell.postTitleLabel.text = "Selling " + posts[indexPath.row].swipes + " swipes for $" + posts[indexPath.row].price + " each"
+		cell.postTitleLabel.text = "Selling " + String(posts[indexPath.row].swipes) + " swipes for $" + String(posts[indexPath.row].price) + " each"
         cell.postSummaryLabel.text = "Sold By: " + posts[indexPath.row].name
         
         return cell

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FacebookCore
 
 class NewPostViewController: UIViewController {
 
@@ -26,11 +27,24 @@ class NewPostViewController: UIViewController {
     @IBAction func save(_ sender: Any) {
         dismiss(animated: true) {
             print("Save Data")
-			let parameters = ["name"	: "name",
-							  "price"	: pricePerSwipe.text,
-							  "swipes"	: numberOfSwipes.text,
-							  "location": location.text,
-							  "comments": comments.text]
+            let parameters: [String:Any] = ["name"	: "Kameron",
+							  "price"	: Double(self.pricePerSwipe.text!),
+							  "swipes"	: Int(self.numberOfSwipes.text!),
+							  "location": self.location.text!,
+							  "comments": self.comments.text]
+            
+            
+//            UserProfile.loadCurrent({ (result) in
+//                switch(result)
+//                {
+//                case .failed(let error):
+//                    fatalError()
+//                case .success(let profile):
+//                    print(profile.firstName!)
+//                    parameters["name"] = profile.firstName!
+//                }
+//            })
+//            print(parameters["name"]!)
 			DatabaseService.shared.postsReference.childByAutoId().setValue(parameters)
         }
     }
