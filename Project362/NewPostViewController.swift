@@ -11,13 +11,14 @@ import FacebookCore
 
 class NewPostViewController: UIViewController {
 
+    @IBOutlet weak var BuyOrSell: UISegmentedControl!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var numberOfSwipes: UITextField!
     @IBOutlet weak var pricePerSwipe: UITextField!
     @IBOutlet weak var location: UITextField!
-    @IBOutlet weak var comments: UITextView!
     @IBOutlet weak var time: UITextField!
     @IBOutlet weak var phoneNumber: UITextField!
+    @IBOutlet weak var comments: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
