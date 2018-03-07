@@ -176,6 +176,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onEdit:" destination="RK3-fL-wfr" eventType="editingChanged" id="wxw-Wz-aQs"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of Swipes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1CN-s7-CHp">
                                 <rect key="frame" x="16" y="123" width="160" height="21"/>
@@ -205,8 +208,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="editingDidBegin:" destination="RK3-fL-wfr" eventType="editingDidBegin" id="y5b-LV-4ZX"/>
-                                    <action selector="editingDidEnd:" destination="RK3-fL-wfr" eventType="editingDidEnd" id="coZ-Kq-qsV"/>
+                                    <action selector="onEdit:" destination="RK3-fL-wfr" eventType="editingChanged" id="THl-jg-LnS"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgl-hx-cpl">
@@ -223,8 +225,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="editingDidBegin:" destination="RK3-fL-wfr" eventType="editingDidBegin" id="KQQ-lT-Sby"/>
-                                    <action selector="editingDidEnd:" destination="RK3-fL-wfr" eventType="editingDidEnd" id="gZj-G7-2PD"/>
+                                    <action selector="onEdit:" destination="RK3-fL-wfr" eventType="editingChanged" id="JNE-ow-KXk"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CtR-Z9-mhg">
@@ -234,8 +235,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="editingDidBegin:" destination="RK3-fL-wfr" eventType="editingDidBegin" id="8C3-Lt-f5H"/>
-                                    <action selector="editingDidEnd:" destination="RK3-fL-wfr" eventType="editingDidEnd" id="dJy-26-Wwt"/>
+                                    <action selector="onEdit:" destination="RK3-fL-wfr" eventType="editingChanged" id="WyJ-Gb-6S1"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xa2-8X-ubl">
@@ -245,8 +245,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="editingDidBegin:" destination="RK3-fL-wfr" eventType="editingDidBegin" id="ezp-5r-QA1"/>
-                                    <action selector="editingDidEnd:" destination="RK3-fL-wfr" eventType="editingDidEnd" id="EZj-M4-bAx"/>
+                                    <action selector="onEdit:" destination="RK3-fL-wfr" eventType="editingChanged" id="y3l-Ys-l6l"/>
                                 </connections>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sFS-L9-CHI">

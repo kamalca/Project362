@@ -20,11 +20,15 @@ class NewPostViewController: UIViewController {
     @IBOutlet weak var phoneNumber: UITextField!
     @IBOutlet weak var comments: UITextView!
     
+    let dateFormatter = DateFormatter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         saveButton.isEnabled = false
+        
+        DateFormatter.dateFormat(fromTemplate: "MM-YY hh:mm", options: 0, locale: nil)
     }
 
     @IBAction func save(_ sender: Any) {
@@ -37,7 +41,7 @@ class NewPostViewController: UIViewController {
 							  "time"	: self.time.text!,
 							  "phoneNumber": self.phoneNumber.text!,
 							  "comments": self.comments.text,
-                              "buyer": self.BuyOrSell.isEnabledForSegment(at: 0)]
+                              "buyer": self.BuyOrSell.isEnabledForSegment(at: 1)]
             
             
 //            UserProfile.loadCurrent({ (result) in
@@ -63,10 +67,7 @@ class NewPostViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func editingDidBegin(_ sender: Any) {
-        saveButton.isEnabled = false
-    }
-    @IBAction func editingDidEnd(_ sender: UITextField) {
+    @IBAction func onEdit(_ sender: UITextField) {
         if let number = phoneNumber.text
         {
             phoneNumber.text = String(number.filter { "01234567890".contains($0) })
