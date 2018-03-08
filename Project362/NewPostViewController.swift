@@ -19,6 +19,7 @@ class NewPostViewController: UIViewController {
     @IBOutlet weak var time: UITextField!
     @IBOutlet weak var phoneNumber: UITextField!
     @IBOutlet weak var comments: UITextView!
+    var userName: String = "Julia"
     
     let dateReader = DateFormatter()
     let dateWriter = DateFormatter()
@@ -29,6 +30,18 @@ class NewPostViewController: UIViewController {
         // Do any additional setup after loading the view.
         saveButton.isEnabled = false
         
+        //Testing
+        UserProfile.loadCurrent({ (result) in
+            switch(result)
+            {
+            case .failed(let error):
+                self.userName = "Julia"
+            case .success(let profile):
+                self.userName = profile.fullName!
+            }
+        })
+        
+        
         //DateFormatter.dateFormat(fromTemplate: "MM-YY hh:mm", options: 0, locale: nil)
         dateReader.locale = Locale(identifier: "en_US_POSIX")
         dateWriter.locale = Locale(identifier: "en_US_POSIX")
@@ -37,7 +50,17 @@ class NewPostViewController: UIViewController {
     }
 
     @IBAction func save(_ sender: Any) {
-            let parameters: [String:Any] = ["name"	: "Kameron",
+        UserProfile.loadCurrent({ (result) in
+            switch(result)
+            {
+            case .failed(let error):
+                self.userName = "Julia"
+            case .success(let profile):
+                self.userName = profile.fullName!
+            }
+        })
+        
+            let parameters: [String:Any] = ["name"	: self.userName,
 							  "price"	: self.pricePerSwipe.text!,
 							  "swipes"	: self.numberOfSwipes.text!,
 							  "location": self.location.text!,
