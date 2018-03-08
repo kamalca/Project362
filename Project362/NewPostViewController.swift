@@ -105,5 +105,9 @@ class NewPostViewController: UIViewController {
             return
         }
     }
+    
+    @IBAction func unwind(segue:UIStoryboardSegue) {
+        print(time.text!)
+    }
 
 }

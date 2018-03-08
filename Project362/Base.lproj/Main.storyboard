@@ -603,10 +603,10 @@
             </objects>
             <point key="canvasLocation" x="1828" y="597"/>
         </scene>
-        <!--Time Popup View Controller-->
+        <!--Date Popup View Controller-->
         <scene sceneID="XaE-ht-NrB">
             <objects>
-                <viewController id="nSX-Rz-t8n" customClass="TimePopupViewController" customModule="Project362" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nSX-Rz-t8n" customClass="DatePopupViewController" customModule="Project362" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LAP-pM-Tn4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -669,9 +669,11 @@
                         <outlet property="saveTime" destination="RfA-IN-ffU" id="Wva-GL-YhJ"/>
                         <outlet property="timeLabel" destination="6vS-zv-7RJ" id="rih-GO-Roj"/>
                         <outlet property="timePicker" destination="DwX-6W-xif" id="YZJ-6S-dVf"/>
+                        <segue destination="cAt-gf-4G7" kind="unwind" identifier="unwindDateSelector" unwindAction="unwindWithSegue:" id="apV-7U-YJg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g7b-HX-t1m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="cAt-gf-4G7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4472.8000000000002" y="757.87106446776613"/>
         </scene>
