@@ -18,7 +18,18 @@ class PostInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         postInfoLabel.numberOfLines = 0
-        postInfoLabel.text = "Seller Name: \(posts[postIndex].name) \n\nNumber of Swipes: \(posts[postIndex].swipes) \n\nPrice of Each Swipe: \(posts[postIndex].price) \n\nLocation: \(posts[postIndex].location) \n\nComments: \(posts[postIndex].comments)"
+        
+        var comments = posts[postIndex].comments
+        if comments == "" {
+            comments = "N/A"
+        }
+        
+        var buyerOrSeller = "Seller"
+        if (posts[postIndex].buyer == true) {
+            buyerOrSeller = "Buyer"
+        }
+        
+        postInfoLabel.text = "\(buyerOrSeller) Name: \(posts[postIndex].name) \n\nNumber of Swipes: \(posts[postIndex].swipes) \n\nPrice of Each Swipe: \(posts[postIndex].price) \n\nLocation: \(posts[postIndex].location) \n\nComments: \(comments)"
         
         // Do any additional setup after loading the view.
     }
