@@ -33,7 +33,7 @@ class NewPostViewController: UIViewController {
         dateReader.locale = Locale(identifier: "en_US_POSIX")
         dateWriter.locale = Locale(identifier: "en_US_POSIX")
         dateReader.dateFormat = "YYYY/MM/dd hh:mm a"
-        dateWriter.dateFormat = "MM/dd hh:mm a"
+        dateWriter.dateFormat = "MM/dd h:mm a"
     }
 
     @IBAction func save(_ sender: Any) {

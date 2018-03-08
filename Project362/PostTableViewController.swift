@@ -22,6 +22,7 @@ class PostTableViewController: UITableViewController {
     @IBOutlet weak var navBar: UINavigationItem!
     
     let dateReader = DateFormatter()
+    let dateWriter = DateFormatter()
     
     func reload() {
         DatabaseService.shared.postsReference.observe(DataEventType.value, with: { (snapshot) in
@@ -54,6 +55,7 @@ class PostTableViewController: UITableViewController {
         super.viewDidLoad()
 		self.navigationController?.isNavigationBarHidden = false
         dateReader.dateFormat = "YYYY/MM/dd hh:mm a"
+        dateWriter.dateFormat = "MM/dd h:mm a"
         
         if (buying)
         {
@@ -128,7 +130,7 @@ class PostTableViewController: UITableViewController {
             else {
                 cell.postTitleLabel.text = String(displayedPosts[indexPath.row].swipes) + " swipes for $" + String(displayedPosts[indexPath.row].price) + " each"
             }
-            cell.postSummaryLabel.text = "  " + displayedPosts[indexPath.row].location + " at " + displayedPosts[indexPath.row].time
+            cell.postSummaryLabel.text = "  " + displayedPosts[indexPath.row].location + " at " + dateWriter.string(from: dateReader.date(from: "2018/" + displayedPosts[indexPath.row].time)!)
         }
         else{
             if Int(displayedPosts[indexPath.row].swipes)! == 1 {
@@ -137,7 +139,7 @@ class PostTableViewController: UITableViewController {
             else {
                 cell.postTitleLabel.text = String(displayedPosts[indexPath.row].swipes) + " swipes for $" + String(displayedPosts[indexPath.row].price) + " each"
             }
-            cell.postSummaryLabel.text = "  " + displayedPosts[indexPath.row].location + " at " + displayedPosts[indexPath.row].time
+            cell.postSummaryLabel.text = "  " + displayedPosts[indexPath.row].location + " at " + dateWriter.string(from: dateReader.date(from: "2018/" + displayedPosts[indexPath.row].time)!)
         }
         
         return cell
