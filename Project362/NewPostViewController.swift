@@ -103,7 +103,8 @@ class NewPostViewController: UIViewController {
         }
     }
     
-    @IBAction func unwindToNewPost(segue:UIStoryboardSegue) {
+    @IBAction func unwindToNewPost(segue:UIStoryboardSegue)
+    {
         
     }
 

@@ -34,13 +34,9 @@ class PostTableViewController: UITableViewController {
             for post in self.posts{
                 if (post.buyer != self.buying)
                 {
-                    if(self.filter == "" || post.location == self.filter)
+                    if(self.filter == "" || post.location == self.filter || post.location == "No Preference")
                     {
-                        //Testeing
-                        if(self.dateReader.date(from: "2018/" + post.time) != nil)
-                        {
                             self.displayedPosts.append(post)
-                        }
                     }
                 }
             }

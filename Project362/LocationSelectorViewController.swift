@@ -16,7 +16,7 @@ class LocationSelectorViewController: UIViewController, UIPickerViewDataSource, 
     
     var loc = ""
     
-    let locations = ["No Filter", "BPlate", "Covel", "De Neve", "Feast", "BCafe", "Cafe 1919", "Rendezvous", "The Study"]
+    let locations = ["No Preference", "BPlate", "Covel", "De Neve", "Feast", "BCafe", "Cafe 1919", "Rendezvous", "The Study"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,12 +53,12 @@ class LocationSelectorViewController: UIViewController, UIPickerViewDataSource, 
             loc = ""
         }
         
-        performSegue(withIdentifier: "UnwindPopup", sender: self)
+        performSegue(withIdentifier: "unwindLocationSelector", sender: self)
     }
     
     @IBAction override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? PostTableViewController {
-            destination.filter = self.loc
+        if let destination = segue.destination as? NewPostViewController {
+            destination.location.text = self.loc
         }
     }
 }
