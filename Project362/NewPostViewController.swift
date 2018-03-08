@@ -19,7 +19,7 @@ class NewPostViewController: UIViewController {
     @IBOutlet weak var time: UITextField!
     @IBOutlet weak var phoneNumber: UITextField!
     @IBOutlet weak var comments: UITextView!
-    var userName: String = "Julia"
+    var userName: String = "David Chen"
     
     let dateReader = DateFormatter()
     let dateWriter = DateFormatter()
@@ -35,7 +35,7 @@ class NewPostViewController: UIViewController {
             switch(result)
             {
             case .failed(let error):
-                self.userName = "Julia"
+                self.userName = "David Chen"
             case .success(let profile):
                 self.userName = profile.fullName!
             }
@@ -54,7 +54,7 @@ class NewPostViewController: UIViewController {
             switch(result)
             {
             case .failed(let error):
-                self.userName = "Julia"
+                self.userName = "David Chen"
             case .success(let profile):
                 self.userName = profile.fullName!
             }
