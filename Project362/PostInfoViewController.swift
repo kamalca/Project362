@@ -11,6 +11,8 @@ import Firebase
 
 class PostInfoViewController: UIViewController {
 
+    let dateReader = DateFormatter()
+    let dateWriter = DateFormatter()
     @IBOutlet weak var postInfoLabel: UILabel!
     var postIndex: Int = 0
     var posts: [Post] = [Post]()

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Project362/NewPostViewController.swift"
-            timestampString = "542162199.1041861"
+            timestampString = "542163672.380429"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "unwindToNewPost(segue:)"
             landmarkType = "7">
          </BreakpointContent>
