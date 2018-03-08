@@ -324,9 +324,11 @@
                         <outlet property="pricePerSwipe" destination="xa2-8X-ubl" id="b6i-KG-YHK"/>
                         <outlet property="saveButton" destination="6s4-N4-NvA" id="FTv-u0-rdk"/>
                         <outlet property="time" destination="IG7-Uz-j98" id="lRS-SI-kH4"/>
+                        <segue destination="UcZ-xy-3UB" kind="unwind" identifier="unwindNewPost" unwindAction="unwindWithSegue:" id="M6G-WM-WdH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cW5-UE-AR7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="UcZ-xy-3UB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3568.8000000000002" y="757.87106446776613"/>
         </scene>
@@ -669,7 +671,7 @@
                         <outlet property="saveTime" destination="RfA-IN-ffU" id="Wva-GL-YhJ"/>
                         <outlet property="timeLabel" destination="6vS-zv-7RJ" id="rih-GO-Roj"/>
                         <outlet property="timePicker" destination="DwX-6W-xif" id="YZJ-6S-dVf"/>
-                        <segue destination="cAt-gf-4G7" kind="unwind" identifier="unwindDateSelector" unwindAction="unwindWithSegue:" id="apV-7U-YJg"/>
+                        <segue destination="cAt-gf-4G7" kind="unwind" identifier="unwindDateSelector" unwindAction="unwindToNewPostWithSegue:" id="sdj-t7-DlM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g7b-HX-t1m" userLabel="First Responder" sceneMemberID="firstResponder"/>

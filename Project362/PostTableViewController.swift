@@ -21,11 +21,14 @@ class PostTableViewController: UITableViewController {
     
     @IBOutlet weak var navBar: UINavigationItem!
     
+    let dateReader = DateFormatter()
+    
     func reload() {
-        displayedPosts = [Post]()
         DatabaseService.shared.postsReference.observe(DataEventType.value, with: { (snapshot) in
             guard let postsSnapshot = PostsSnapshot(with: snapshot) else { return }
             self.posts = postsSnapshot.posts
+            
+            self.displayedPosts = [Post]()
             
             //Filter
             for post in self.posts{
@@ -33,14 +36,18 @@ class PostTableViewController: UITableViewController {
                 {
                     if(self.filter == "" || post.location == self.filter)
                     {
-                        self.displayedPosts.append(post)
+                        //Testeing
+                        if(self.dateReader.date(from: "2018/" + post.time) != nil)
+                        {
+                            self.displayedPosts.append(post)
+                        }
                     }
                 }
             }
             
             //Sort
             self.displayedPosts.sort(by: { (post1, post2) -> Bool in
-                return Double(post1.price)! < Double(post2.price)!
+                return self.dateReader.date(from: "2018/" + post1.time)! < self.dateReader.date(from: "2018/" + post2.time)!
             })
             
             self.postsTableView.reloadData()
@@ -50,6 +57,8 @@ class PostTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		self.navigationController?.isNavigationBarHidden = false
+        dateReader.dateFormat = "YYYY/MM/dd hh:mm a"
+        
         if (buying)
         {
             navBar.title = "Sellers"

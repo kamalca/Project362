@@ -37,8 +37,6 @@ class NewPostViewController: UIViewController {
     }
 
     @IBAction func save(_ sender: Any) {
-        dismiss(animated: true) {
-            print("Save Data")
             let parameters: [String:Any] = ["name"	: "Kameron",
 							  "price"	: self.pricePerSwipe.text!,
 							  "swipes"	: self.numberOfSwipes.text!,
@@ -61,7 +59,7 @@ class NewPostViewController: UIViewController {
 //            })
 //            print(parameters["name"]!)
 			DatabaseService.shared.postsReference.childByAutoId().setValue(parameters)
-        }
+        performSegue(withIdentifier: "unwindNewPost", sender: nil)
     }
     @IBAction func cancel(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
@@ -84,7 +82,6 @@ class NewPostViewController: UIViewController {
             time.text != "" &&
             dateReader.date(from: "2018/" + time.text!) != nil)
         {
-            print( dateWriter.string(from: dateReader.date(from: "2018/" + time.text!)!) )
             saveButton.isEnabled = true
         }
         else
@@ -101,13 +98,13 @@ class NewPostViewController: UIViewController {
         // Pass the selected object to the new view controller.
         super.prepare(for: segue, sender: sender)
         guard let button = sender as? UIBarButtonItem, button === saveButton else {
-            print("Post not saved")
+            
             return
         }
     }
     
-    @IBAction func unwind(segue:UIStoryboardSegue) {
-        print(time.text!)
+    @IBAction func unwindToNewPost(segue:UIStoryboardSegue) {
+        
     }
 
 }
