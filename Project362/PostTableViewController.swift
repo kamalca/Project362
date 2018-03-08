@@ -125,19 +125,19 @@ class PostTableViewController: UITableViewController {
 		if(!displayedPosts[indexPath.row].buyer)
         {
             if Int(displayedPosts[indexPath.row].swipes)! == 1 {
-                cell.postTitleLabel.text = "1 swipe for $" + String(displayedPosts[indexPath.row].price)
+                cell.postTitleLabel.text = "1 swipe for $" + (NSString(format: "%.2f", Double(displayedPosts[indexPath.row].price)!) as String)
             }
             else {
-                cell.postTitleLabel.text = String(displayedPosts[indexPath.row].swipes) + " swipes for $" + String(displayedPosts[indexPath.row].price) + " each"
+                cell.postTitleLabel.text = String(displayedPosts[indexPath.row].swipes) + " swipes for $" + (NSString(format: "%.2f", Double(displayedPosts[indexPath.row].price)!) as String) + " each"
             }
             cell.postSummaryLabel.text = "  " + displayedPosts[indexPath.row].location + " at " + dateWriter.string(from: dateReader.date(from: "2018/" + displayedPosts[indexPath.row].time)!)
         }
         else{
             if Int(displayedPosts[indexPath.row].swipes)! == 1 {
-                cell.postTitleLabel.text = "1 swipe for $" + String(displayedPosts[indexPath.row].price)
+                cell.postTitleLabel.text = "1 swipe for $" + (NSString(format: "%.2f", Double(displayedPosts[indexPath.row].price)!) as String)
             }
             else {
-                cell.postTitleLabel.text = String(displayedPosts[indexPath.row].swipes) + " swipes for $" + String(displayedPosts[indexPath.row].price) + " each"
+                cell.postTitleLabel.text = String(displayedPosts[indexPath.row].swipes) + " swipes for $" + (NSString(format: "%.2f", Double(displayedPosts[indexPath.row].price)!) as String) + " each"
             }
             cell.postSummaryLabel.text = "  " + displayedPosts[indexPath.row].location + " at " + dateWriter.string(from: dateReader.date(from: "2018/" + displayedPosts[indexPath.row].time)!)
         }

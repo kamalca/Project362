@@ -643,7 +643,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eO8-75-Ny8">
                                 <rect key="frame" x="16" y="212" width="343" height="207"/>
                                 <subviews>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="DwX-6W-xif">
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="DwX-6W-xif">
                                         <rect key="frame" x="5" y="0.0" width="333" height="169"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="169" id="UWT-dV-0cx"/>

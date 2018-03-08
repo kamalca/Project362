@@ -34,7 +34,7 @@ class PostInfoViewController: UIViewController {
             buyerOrSeller = "Buyer"
         }
         
-        postInfoLabel.text = "\(buyerOrSeller) Name: \(posts[postIndex].name) \n\nNumber of Swipes: \(posts[postIndex].swipes) \n\nPrice of Each Swipe: \(posts[postIndex].price) \n\nDate: \(dateWriter.string(from: dateReader.date(from: "2017/" + posts[postIndex].time)!)) \n\nLocation: \(posts[postIndex].location) \n\nComments: \(comments)"
+        postInfoLabel.text = "\(buyerOrSeller) Name: \(posts[postIndex].name) \n\nNumber of Swipes: \(posts[postIndex].swipes) \n\nPrice of Each Swipe: $\((NSString(format: "%.2f", Double(posts[postIndex].price)!) as String)) \n\nDate: \(dateWriter.string(from: dateReader.date(from: "2017/" + posts[postIndex].time)!)) \n\nLocation: \(posts[postIndex].location) \n\nComments: \(comments)"
         
         // Do any additional setup after loading the view.
     }
